@@ -1,0 +1,14 @@
+name = isa Browse eLetters
+description = Recent eLetters/eLetter Archive/Browse eLetters page
+core = 7.x
+package = Highwire Journal Templates
+version = 7.x-1.0-beta1
+project = jnl_isa_browse_eletters
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = snippet
+features[ctools][] = page_manager:pages_default:1
+features[ctools][] = snippet:default_snippet:1
+features[features_api][] = api:1
+features[page_manager_pages][] = jnl_isa_browse_eletters
+features[snippet][] = jnl_isa_about_eletters_snippet

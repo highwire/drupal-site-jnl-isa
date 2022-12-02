@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the jnl_isa_crossref_fwd_links feature.
+ */
+
+include_once 'jnl_isa_crossref_fwd_links.features.inc';

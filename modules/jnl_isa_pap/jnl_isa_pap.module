@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Highwire Jnl Template PAP feature.
+ */
+
+include_once 'jnl_isa_pap.features.inc';

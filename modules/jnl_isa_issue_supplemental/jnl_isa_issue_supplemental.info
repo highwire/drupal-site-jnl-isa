@@ -1,0 +1,14 @@
+name = isa Issue Supplemental
+core = 7.x
+package = Highwire Journal Templates
+php = 5.2.4
+version = 7.x-1.0-beta1
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = snippet
+features[ctools][] = page_manager:pages_default:1
+features[ctools][] = snippet:default_snippet:1
+features[features_api][] = api:1
+features[page_manager_pages][] = jnl_isa_issue_supplemental
+features[snippet][] = jnl_isa_issue_supplemental
+mtime = 1432313268

@@ -1,0 +1,35 @@
+<?php
+/**
+ * @file
+ * Code for the HighWire - Template - Journal feature.
+ */
+
+define('HIGHWIRE_JCORE_TEMPLATE_VERSION', '2017-06');
+
+include_once 'jnl_isa.features.inc';
+include_once 'jnl_isa.features.user_role.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function jnl_isa_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}
+
+/**
+ * Implements hook_requirements().
+ *
+ * Set the JCORE template version number
+ */
+function jnl_isa_requirements($phase) {
+  $requirements = array();
+
+  if ($phase == 'runtime') {
+    $requirements['jcore_template_version'] = array(
+      'title' => t('JCORE Template Version Number'),
+      'value' => HIGHWIRE_JCORE_TEMPLATE_VERSION,
+    );
+  }
+
+  return $requirements;
+}

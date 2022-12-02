@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Highwire Jnl Template Entity Pages feature.
+ */
+
+include_once 'jnl_isa_entity_pages.features.inc';

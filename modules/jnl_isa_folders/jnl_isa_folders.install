@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_enable().
+ */
+
+function jnl_isa_folders_enable() {
+  variable_set('highwire_sitecode', 'isa');
+}
+
+/**
+ * Implements hook_disable().
+ */
+
+function jnl_isa_folders_disable() {
+  variable_del('highwire_sitecode');
+}

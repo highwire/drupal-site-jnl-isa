@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Highwire JNL Template Folders feature.
+ */
+
+include_once 'jnl_isa_folders.features.inc';

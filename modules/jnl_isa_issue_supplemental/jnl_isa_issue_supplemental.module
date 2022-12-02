@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the jnl_isa_issue_supplemental feature.
+ */
+
+include_once 'jnl_isa_issue_supplemental.features.inc';

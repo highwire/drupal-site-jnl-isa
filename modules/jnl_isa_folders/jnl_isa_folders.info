@@ -1,0 +1,15 @@
+name = isa Folders
+description = Integrates Folders functionality.
+core = 7.x
+package = Highwire Journal Templates
+version = 7.x-1.0-beta1
+project = jnl_isa_folders
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = strongarm
+dependecnies[] = highwire_folders
+features[ctools][] = page_manager:pages_default:1
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[page_manager_pages][] = jnl_isa_folders
+features[variable][] = highwire_folders_article_citation_settings_wrapper

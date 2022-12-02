@@ -1,0 +1,7 @@
+<?php
+
+function jnl_isa_entity_pages_install() {
+  // Enable node and taxnomy panel pages
+  variable_set('page_manager_node_view_disabled', FALSE);
+  variable_set('page_manager_term_view_disabled', FALSE);
+}

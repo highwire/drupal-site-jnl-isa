@@ -1,0 +1,17 @@
+name = isa Image Gallery
+description = Holds pages related to image gallery.
+core = 7.x
+package = Highwire Journal Templates
+php = 5.2.4
+version = 7.x-1.0-beta1
+project = jnl_isa_image_gallery
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = snippet
+features[ctools][] = page_manager:pages_default:1
+features[ctools][] = snippet:default_snippet:1
+features[features_api][] = api:1
+features[page_manager_handlers][] = term_view_panel_context_2
+features[page_manager_pages][] = jnl_isa_image_gallery
+features[snippet][] = jnl_isa_about_image_gallery
+mtime = 1432313268

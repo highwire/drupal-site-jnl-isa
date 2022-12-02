@@ -1,0 +1,17 @@
+name = isa PAP
+description = Lists all the articles which are ahead of print, categorized by section & date
+core = 7.x
+package = Highwire Journal Templates
+php = 5.2.4
+version = 7.x-1.0
+project = jnl_isa_pap
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = snippet
+features[ctools][] = page_manager:pages_default:1
+features[ctools][] = snippet:default_snippet:1
+features[features_api][] = api:1
+features[page_manager_pages][] = jnl_isa_pap_by_section
+features[page_manager_pages][] = jnl_isa_pap_early_recent
+features[snippet][] = jnl_isa_pap_description_main_snippet
+features[snippet][] = jnl_isa_pap_description_right_snippet

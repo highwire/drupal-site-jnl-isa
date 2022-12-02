@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the isa Browse eLetters feature.
+ */
+
+include_once 'jnl_isa_browse_eletters.features.inc';

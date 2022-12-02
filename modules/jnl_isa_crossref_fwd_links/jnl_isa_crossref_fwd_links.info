@@ -1,0 +1,10 @@
+name = jnl_isa_crossref_fwd_links
+core = 7.x
+package = Features
+php = 5.2.4
+dependencies[] = ctools
+dependencies[] = page_manager
+features[ctools][] = page_manager:pages_default:1
+features[features_api][] = api:1
+features[page_manager_pages][] = jnl_isa_crossref_forward_links
+mtime = 1428831980

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the jnl_isa - Direct Publishing feature.
+ */
+
+include_once 'jnl_isa_direct_publishing.features.inc';
