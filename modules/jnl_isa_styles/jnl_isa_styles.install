@@ -12,37 +12,38 @@ function jnl_isa_styles_update_7101(&$sandbox) {
   $jcode = variable_get('highwire_default_jcode', FALSE);
   if ($jcode == 'isa') {
     if ($theme_status) {
-        $jcore_1_settings = variable_get('theme_jcore_1_settings', array());
-        $color_jcore_1_palette = variable_get('color_jcore_1_palette', array());
-        $colors = array(
-          'menu_dropdown_bg' => '#6B8847',
-          'menu_dropdown_link' => '#ffffff',
-          'link_main_menu' => '#45533a',
-          'link_main_menu_active_bg' => '#6b8847',
-          'footer_bg' => '#45533a',
-          'footer_text' => '#ffffff',
-          'ui_flat_active' => '#45533a',
-          'tab_link_active' => '#45533a',
-          'tab_link_hover' => '#ffffff',
-          'link_main_menu_active' => '#b5cb87',
-          'link_main_menu_active_border' => '#b5cb87',
-          'ui_flat_hover' => '#45533a',
-          'menu_dropdown_link_hover' => '#ffffff',
-          'ui_gradient_text_hover' => '#b5cb87',
-          'ui_flat_text_hover' => '#ffffff',
-          'link_hover' => '#b5cb87',
-          'link' => '#b5cb87',
-          'dru_tabs_links' => '#ffffff',
-          'dru_tabs_links_active' => '#45533a',
-          'dru_tabs_links_bg' => '#45533a',
-
-        );
-        foreach ($colors as $key => $color) {
-          $jcore_1_settings['palette'][$key] = $color;
-          $color_jcore_1_palette[$key] = $color;
-        }
-        variable_set('theme_jcore_1_settings', $jcore_1_settings);
-        variable_set('color_jcore_1_palette', $color_jcore_1_palette);
+      $jcore_1_settings = variable_get('theme_jcore_1_settings', array());
+      $color_jcore_1_palette = variable_get('color_jcore_1_palette', array());
+      $colors = array(
+        'menu_dropdown_bg' => '#6B8847',
+        'menu_dropdown_link' => '#ffffff',
+        'link_main_menu' => '#45533a',
+        'link_main_menu_active_bg' => '#6b8847',
+        'footer_bg' => '#45533a',
+        'footer_text' => '#ffffff',
+        'ui_flat_active' => '#45533a',
+        'tab_link_active' => '#ffffff',
+        'tab_link_hover' => '#ffffff',
+        'link_main_menu_active' => '#45533a',
+        'link_main_menu_active_border' => '#45533a',
+        'ui_flat_hover' => '#45533a',
+        'menu_dropdown_link_hover' => '#ffffff',
+        'ui_gradient_text_hover' => '#b5cb87',
+        'ui_flat_text_hover' => '#ffffff',
+        'link_hover' => '#b5cb87',
+        'link' => '#45533a',
+        'dru_tabs_links' => '#ffffff',
+        'dru_tabs_links_active' => '#45533a',
+        'dru_tabs_links_bg' => '#45533a',
+        'page_title' => '#45533a',
+        'menu_bar_border' => '#b5cb87'
+      );
+      foreach ($colors as $key => $color) {
+        $jcore_1_settings['palette'][$key] = $color;
+        $color_jcore_1_palette[$key] = $color;
+      }
+      variable_set('theme_jcore_1_settings', $jcore_1_settings);
+      variable_set('color_jcore_1_palette', $color_jcore_1_palette);
     }
   } 
 }
