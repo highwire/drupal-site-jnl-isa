@@ -48,3 +48,32 @@ function jnl_isa_styles_update_7101(&$sandbox) {
   } 
 }
 
+/**
+* IAUF-5: RSS advanced page creation
+*/
+function jnl_isa_styles_update_7102(&$sandbox) {
+  // Advanced page content.
+  $body = '
+    <p>The following RSS feeds are available:</p>
+    <p><a href="/rss/current.xml"><i class="icon-rss"> </i>Current issue only</a></p>
+    <p><a href="/rss/recent.xml"><i class="icon-rss"> </i>Recent issues</a></p>
+    <p><a href="/rss/ahead.xml"><i class="icon-rss"> </i>Early Access</a></p> 
+    <p><a href="/rss/mfr.xml"><i class="icon-rss"> </i>Most frequently read articles</a></p> 
+    <p><a href="/rss/mfc.xml"><i class="icon-rss"> </i>Most frequently cited articles</a></p>
+  ';
+
+  // Create Advanced page.
+  $node = new stdClass();
+  $node->type = 'advanced_page';
+  node_object_prepare($node);
+  $node->title = 'RSS';
+  $node->body[LANGUAGE_NONE][0]['value'] = $body;
+  $node->body[LANGUAGE_NONE][0]['format']  = 'highwire_full_html';
+  $node->uid = 1;
+  $node->language = LANGUAGE_NONE;
+  $node->status = 1;
+  $node->path['alias'] = 'rss';
+  $node->path['pathauto'] = 0;
+  node_save($node);
+}
+
