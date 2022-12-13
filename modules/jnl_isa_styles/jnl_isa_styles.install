@@ -77,3 +77,14 @@ function jnl_isa_styles_update_7102(&$sandbox) {
   node_save($node);
 }
 
+/**
+ * IAUF-13 : Google Analytics
+ */
+function jnl_isa_styles_update_7103(&$sandbox) {
+  $enabled = module_enable(array('googleanalytics'));
+  if (!$enabled) {
+    throw new DrupalUpdateException('googleanalytics module did not enable.');
+  }
+  variable_set('googleanalytics_account','UA-21418177-5');  
+}
+
