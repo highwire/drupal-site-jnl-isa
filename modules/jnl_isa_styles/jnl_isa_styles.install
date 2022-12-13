@@ -3,13 +3,47 @@
  * @file
  * ISA custom install.
  */
- 
-  /**
- * Implements hook_preprocess_html().
- */
-function jnl_isa_styles_preprocess_html(&$vars) {
-  $module_path = drupal_get_path('module', 'jnl_uwp_styles');
-  // Add custom css file with group > 2000 so it is included after all the responsive stylesheets from omega.
-  drupal_add_css($module_path . '/css/jnl_isa_styles.css.less', array('group' => 2001));
+
+/**
+ * IAUF-19 : color code 
+ */ 
+function jnl_isa_styles_update_7101(&$sandbox) {
+  $theme_status = db_query("SELECT status FROM system WHERE name = 'jcore_1'")->fetchField();
+  $jcode = variable_get('highwire_default_jcode', FALSE);
+  if ($jcode == 'isa') {
+    if ($theme_status) {
+        $jcore_1_settings = variable_get('theme_jcore_1_settings', array());
+        $color_jcore_1_palette = variable_get('color_jcore_1_palette', array());
+        $colors = array(
+          'menu_dropdown_bg' => '#6B8847',
+          'menu_dropdown_link' => '#ffffff',
+          'link_main_menu' => '#45533a',
+          'link_main_menu_active_bg' => '#6b8847',
+          'footer_bg' => '#45533a',
+          'footer_text' => '#ffffff',
+          'ui_flat_active' => '#45533a',
+          'tab_link_active' => '#45533a',
+          'tab_link_hover' => '#ffffff',
+          'link_main_menu_active' => '#b5cb87',
+          'link_main_menu_active_border' => '#b5cb87',
+          'ui_flat_hover' => '#45533a',
+          'menu_dropdown_link_hover' => '#ffffff',
+          'ui_gradient_text_hover' => '#b5cb87',
+          'ui_flat_text_hover' => '#ffffff',
+          'link_hover' => '#b5cb87',
+          'link' => '#b5cb87',
+          'dru_tabs_links' => '#ffffff',
+          'dru_tabs_links_active' => '#45533a',
+          'dru_tabs_links_bg' => '#45533a',
+
+        );
+        foreach ($colors as $key => $color) {
+          $jcore_1_settings['palette'][$key] = $color;
+          $color_jcore_1_palette[$key] = $color;
+        }
+        variable_set('theme_jcore_1_settings', $jcore_1_settings);
+        variable_set('color_jcore_1_palette', $color_jcore_1_palette);
+    }
+  } 
 }
 
