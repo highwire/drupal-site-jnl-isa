@@ -6,3 +6,4 @@ version = 7.x-1.0
 project = jnl_isa_styles
 
 less[sheets][] = css/jnl_isa_styles.css.less
+
