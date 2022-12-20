@@ -1,0 +1,90 @@
+<?php
+/**
+ * @file
+ * ISA custom install.
+ */
+
+/**
+ * IAUF-19 : color code 
+ */ 
+function jnl_isa_styles_update_7101(&$sandbox) {
+  $theme_status = db_query("SELECT status FROM system WHERE name = 'jcore_1'")->fetchField();
+  $jcode = variable_get('highwire_default_jcode', FALSE);
+  if ($jcode == 'isa') {
+    if ($theme_status) {
+      $jcore_1_settings = variable_get('theme_jcore_1_settings', array());
+      $color_jcore_1_palette = variable_get('color_jcore_1_palette', array());
+      $colors = array(
+        'menu_dropdown_bg' => '#6B8847',
+        'menu_dropdown_link' => '#ffffff',
+        'link_main_menu' => '#45533a',
+        'link_main_menu_active_bg' => '#6b8847',
+        'footer_bg' => '#45533a',
+        'footer_text' => '#ffffff',
+        'ui_flat_active' => '#45533a',
+        'tab_link_active' => '#ffffff',
+        'tab_link_hover' => '#ffffff',
+        'link_main_menu_active' => '#45533a',
+        'link_main_menu_active_border' => '#45533a',
+        'ui_flat_hover' => '#45533a',
+        'menu_dropdown_link_hover' => '#ffffff',
+        'ui_gradient_text_hover' => '#b5cb87',
+        'ui_flat_text_hover' => '#ffffff',
+        'link_hover' => '#b5cb87',
+        'link' => '#45533a',
+        'dru_tabs_links' => '#ffffff',
+        'dru_tabs_links_active' => '#45533a',
+        'dru_tabs_links_bg' => '#45533a',
+        'page_title' => '#45533a',
+        'menu_bar_border' => '#b5cb87'
+      );
+      foreach ($colors as $key => $color) {
+        $jcore_1_settings['palette'][$key] = $color;
+        $color_jcore_1_palette[$key] = $color;
+      }
+      variable_set('theme_jcore_1_settings', $jcore_1_settings);
+      variable_set('color_jcore_1_palette', $color_jcore_1_palette);
+    }
+  } 
+}
+
+/**
+* IAUF-5: RSS advanced page creation
+*/
+function jnl_isa_styles_update_7102(&$sandbox) {
+  // Advanced page content.
+  $body = '
+    <p>The following RSS feeds are available:</p>
+    <p><a href="/rss/current.xml"><i class="icon-rss"> </i>Current issue only</a></p>
+    <p><a href="/rss/recent.xml"><i class="icon-rss"> </i>Recent issues</a></p>
+    <p><a href="/rss/ahead.xml"><i class="icon-rss"> </i>Early Access</a></p> 
+    <p><a href="/rss/mfr.xml"><i class="icon-rss"> </i>Most frequently read articles</a></p> 
+    <p><a href="/rss/mfc.xml"><i class="icon-rss"> </i>Most frequently cited articles</a></p>
+  ';
+
+  // Create Advanced page.
+  $node = new stdClass();
+  $node->type = 'advanced_page';
+  node_object_prepare($node);
+  $node->title = 'RSS';
+  $node->body[LANGUAGE_NONE][0]['value'] = $body;
+  $node->body[LANGUAGE_NONE][0]['format']  = 'highwire_full_html';
+  $node->uid = 1;
+  $node->language = LANGUAGE_NONE;
+  $node->status = 1;
+  $node->path['alias'] = 'rss';
+  $node->path['pathauto'] = 0;
+  node_save($node);
+}
+
+/**
+ * IAUF-13 : Google Analytics
+ */
+function jnl_isa_styles_update_7103(&$sandbox) {
+  $enabled = module_enable(array('googleanalytics'));
+  if (!$enabled) {
+    throw new DrupalUpdateException('googleanalytics module did not enable.');
+  }
+  variable_set('googleanalytics_account','UA-21418177-5');  
+}
+

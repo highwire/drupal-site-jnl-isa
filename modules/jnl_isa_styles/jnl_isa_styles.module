@@ -1,0 +1,15 @@
+<?php
+/**
+ * @file
+ * ISA Journal style module.
+ */
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function jnl_isa_styles_preprocess_html(&$vars) {
+  $module_path = drupal_get_path('module', 'jnl_isa_styles');
+  // Add custom css file with group > 2000 so it is included after all the responsive stylesheets from omega.
+  drupal_add_css($module_path . '/css/jnl_isa_styles.css.less', array('group' => 2001));
+}
+
