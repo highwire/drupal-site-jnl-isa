@@ -88,3 +88,87 @@ function jnl_isa_styles_update_7103(&$sandbox) {
   variable_set('googleanalytics_account','UA-21418177-5');  
 }
 
+/**
+ * IAUF-10 : Social Media- Twitter & FB URL update
+ */
+ function jnl_isa_styles_update_7106(&$sandbox) {
+  $menu_name = 'menu-social-media';
+  $menu = array(
+    'menu_name' => $menu_name,
+    'title' => t('Social Media'),
+    'description' => t('Links to social media accounts'),
+  );
+
+  menu_save($menu);
+
+  $menu_links = array(
+    array(
+      'link_title' => 'Facebook',
+      'link_path' => 'https://www.facebook.com/InternationalSocietyofArboriculture',
+      'menu_name' => $menu_name,
+      'weight' => 0,
+      'expanded' => 0,
+      'options' => array(
+        'attributes' => array(
+          'data-font-icon' => 'icon-facebook-sign icon-2x',
+          'data-icon-position' => 'before',
+          'data-hide-link-title' => 1,
+          'target' => '_blank',
+          'class' => 'social-menu-facebook',
+        ),
+      ),
+    ),
+    array(
+      'link_title' => 'Twitter',
+      'link_path' => 'https://twitter.com/ISArboriculture',
+      'menu_name' => $menu_name,
+      'weight' => 1,
+      'expanded' => 0,
+      'options' => array(
+        'attributes' => array(
+          'data-font-icon' => 'icon-twitter-sign icon-2x',
+          'data-icon-position' => 'before',
+          'data-hide-link-title' => 1,
+          'target' => '_blank',
+          'class' => 'social-menu-twitter',
+        ),
+      ),
+    ),
+    array(
+      'link_title' => 'YouTube',
+      'link_path' => 'https://www.youtube.com/user/ISAAdmin',
+      'menu_name' => $menu_name,
+      'weight' => 2,
+      'expanded' => 0,
+      'options' => array(
+        'attributes' => array(
+          'data-font-icon' => 'icon-youtube-sign icon-2x',
+          'data-icon-position' => 'before',
+          'data-hide-link-title' => 1,
+          'target' => '_blank',
+          'class' => 'social-menu-youtube',
+        ),
+      ),
+    ),
+    array(
+      'link_title' => 'LinkedIn',
+      'link_path' => 'https://www.linkedin.com/company/international-society-of-arboriculture',
+      'menu_name' => $menu_name,
+      'weight' => 3,
+      'expanded' => 0,
+      'options' => array(
+        'attributes' => array(
+          'data-font-icon' => 'icon-linkedin-sign icon-2x',
+          'data-icon-position' => 'before',
+          'data-hide-link-title' => 1,
+          'target' => '_blank',
+          'class' => 'social-menu-linkedin',
+        ),
+      ),
+    ),
+  );
+
+  foreach ($menu_links as $item) {
+    menu_link_save($item);
+  }
+}
