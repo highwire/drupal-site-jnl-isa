@@ -1,7 +1,6 @@
 name = isa Manage marked citations
 core = 7.x
 package = Highwire Journal Templates
-php = 5.2.4
 version = 7.x-1.0-beta1
 project = jnl_isa_manage_citations
 dependencies[] = ctools
@@ -22,4 +21,3 @@ features[panels_mini][] = jnl_isa_cit_toolb
 features[panels_mini][] = jnl_isa_mult_exrt
 features[panels_mini][] = jnl_isa_save_copy
 features[snippet][] = jnl_isa_about_manage_selected_citation
-mtime = 1443112688

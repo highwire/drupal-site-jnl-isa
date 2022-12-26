@@ -2,7 +2,6 @@ name = isa Challenge override
 description = Override for default challenge areas (with snippets)
 core = 7.x
 package = Highwire Journal Templates
-php = 5.2.4
 version = 7.x-1.0
 project = jnl_isa_challenge_override
 dependencies[] = ctools
