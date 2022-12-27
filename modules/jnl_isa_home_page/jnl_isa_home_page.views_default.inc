@@ -11,1179 +11,6 @@ function jnl_isa_home_page_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'jnl_isa_pap_list';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'efq_node';
-  $view->human_name = 'isa PAP List';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Published Ahead of Print';
-  $handler->display->display_options['use_more'] = TRUE;
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'View more';
-  $handler->display->display_options['link_display'] = 'custom_url';
-  $handler->display->display_options['link_url'] = 'content/early/recent';
-  $handler->display->display_options['access']['type'] = 'none';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'highwire_article_citation_list';
-  $handler->display->display_options['style_options']['citation_settings_source'] = 'corpus_config';
-  $handler->display->display_options['style_options']['citation_manager_wrapper'] = array(
-    'citation_manager_citation' => 'jcore_list_full',
-  );
-  $handler->display->display_options['style_options']['corpus_config_wrapper'] = array(
-    'corpus_config_citation_context' => 'full_browse',
-  );
-  $handler->display->display_options['style_options']['citation_style'] = 'jcore_standard';
-  $handler->display->display_options['style_options']['cache_enabled'] = 1;
-  $handler->display->display_options['style_options']['cache_time'] = '86400';
-  $handler->display->display_options['style_options']['title_type'] = 'full';
-  $handler->display->display_options['style_options']['short_title_options'] = array(
-    'char_count' => '',
-    'add_ellipsis' => 0,
-  );
-  $handler->display->display_options['style_options']['title_as_link'] = 1;
-  $handler->display->display_options['style_options']['display_subtitle'] = 0;
-  $handler->display->display_options['style_options']['choose_pubdate'] = 'ppubdate';
-  $handler->display->display_options['style_options']['pubdate_format_type'] = '';
-  $handler->display->display_options['style_options']['pubdate_format_custom'] = '';
-  $handler->display->display_options['style_options']['display_markup_snippet'] = '';
-  $handler->display->display_options['style_options']['highlight_image_toggle'] = 0;
-  $handler->display->display_options['style_options']['display_original_link'] = 0;
-  $handler->display->display_options['style_options']['display_access_indicator'] = 0;
-  $handler->display->display_options['style_options']['access_indicator_settings'] = array(
-    'open_access' => array(
-      'icon' => 'icon-unlock-alt',
-      'title' => 'Open Access',
-    ),
-    'user_access' => array(
-      'icon' => 'icon-ok-sign',
-      'title' => 'You have access',
-    ),
-    'no_access' => array(
-      'icon' => '',
-      'title' => '',
-    ),
-  );
-  $handler->display->display_options['style_options']['display_variants'] = 0;
-  $handler->display->display_options['style_options']['display_supplements'] = 0;
-  $handler->display->display_options['style_options']['display_variants_list_inline'] = 0;
-  $handler->display->display_options['style_options']['pdf_download'] = array(
-    'display_pdf_download' => 0,
-    'pdf_download_icon' => '',
-    'pdf_download_text' => '',
-  );
-  $handler->display->display_options['style_options']['cpath_prefix'] = '';
-  $handler->display->display_options['style_options']['show_mark_citation'] = 0;
-  $handler->display->display_options['style_options']['display_infotrieve_link'] = 0;
-  $handler->display->display_options['style_options']['infotrieve_link_settings'] = array(
-    'icon' => '',
-    'link_caption' => '',
-  );
-  $handler->display->display_options['style_options']['bundle_overrides_checkboxes'] = array(
-    'highwire_book_fragment' => array(
-      'selector' => 0,
-    ),
-    'highwire_news_story' => array(
-      'selector' => 0,
-    ),
-    'highwire_book_edition' => array(
-      'selector' => 0,
-    ),
-    'highwire_article' => array(
-      'selector' => 0,
-    ),
-    'highwire_issue' => array(
-      'selector' => 0,
-    ),
-    'highwire_comment' => array(
-      'selector' => 0,
-    ),
-    'highwire_fragment' => array(
-      'selector' => 0,
-    ),
-    'highwire_book_section' => array(
-      'selector' => 0,
-    ),
-    'highwire_journal' => array(
-      'selector' => 0,
-    ),
-  );
-  $handler->display->display_options['style_options']['bundle_overrides'] = array(
-    'highwire_book_fragment' => array(
-      'selector' => 0,
-      'citation_style' => 'jcore_title_and_author',
-      'cache_enabled' => 1,
-      'cache_time' => '600',
-      'title_type' => 'full',
-      'short_title_options' => array(
-        'char_count' => '50',
-        'add_ellipsis' => 0,
-      ),
-      'title_as_link' => 0,
-      'display_subtitle' => 0,
-      'choose_pubdate' => 'ppubdate',
-      'pubdate_format_type' => '',
-      'pubdate_format_custom' => '',
-      'display_markup_snippet' => '',
-      'highlight_image_toggle' => 0,
-      'display_original_link' => 0,
-      'display_access_indicator' => '0',
-      'access_indicator_settings' => array(
-        'open_access' => array(
-          'icon' => 'icon-unlock',
-          'title' => 'Open Access',
-        ),
-        'user_access' => array(
-          'icon' => 'icon-ok-sign',
-          'title' => 'You have access',
-        ),
-        'no_access' => array(
-          'icon' => 'icon-lock',
-          'title' => 'Restricted access',
-        ),
-      ),
-      'display_variants' => 0,
-      'display_supplements' => 0,
-      'display_variants_list_inline' => 1,
-      'pdf_download' => array(
-        'display_pdf_download' => 0,
-        'pdf_download_icon' => 'icon-cloud-download',
-        'pdf_download_text' => 'PDF',
-      ),
-      'cpath_prefix' => '',
-      'show_mark_citation' => 0,
-      'display_infotrieve_link' => 0,
-      'infotrieve_link_settings' => array(
-        'icon' => 'icon-usd',
-        'link_caption' => 'Order full text via Infotrieve',
-      ),
-      'display_highlight_image' => 0,
-      'highlight_image_style' => 'thumbnail',
-      'display_fragment_caption' => 1,
-      'display_parent_citation' => 1,
-      'parent_citation_type' => 'highwire_book_section',
-      'parent_citation_settings' => array(
-        'citation_style' => 'folio_book_sections_standard',
-        'cache_enabled' => 1,
-        'cache_time' => '600',
-        'title_type' => 'full',
-        'short_title_options' => array(
-          'char_count' => '50',
-          'add_ellipsis' => 0,
-        ),
-        'title_as_link' => 0,
-        'display_subtitle' => 0,
-        'choose_pubdate' => 'ppubdate',
-        'pubdate_format_type' => '',
-        'pubdate_format_custom' => '',
-        'display_markup_snippet' => '',
-        'highlight_image_toggle' => 0,
-        'display_original_link' => 0,
-        'display_access_indicator' => 0,
-        'access_indicator_settings' => array(
-          'open_access' => array(
-            'icon' => 'icon-unlock',
-            'title' => 'Open Access',
-          ),
-          'user_access' => array(
-            'icon' => 'icon-ok-sign',
-            'title' => 'You have access',
-          ),
-          'no_access' => array(
-            'icon' => 'icon-lock',
-            'title' => 'Restricted access',
-          ),
-        ),
-        'display_variants' => 0,
-        'display_supplements' => 0,
-        'display_variants_list_inline' => 1,
-        'pdf_download' => array(
-          'display_pdf_download' => 0,
-          'pdf_download_icon' => 'icon-cloud-download',
-          'pdf_download_text' => 'PDF',
-        ),
-        'cpath_prefix' => '',
-        'show_mark_citation' => 0,
-        'display_infotrieve_link' => 0,
-        'infotrieve_link_settings' => array(
-          'icon' => 'icon-usd',
-          'link_caption' => 'Order full text via Infotrieve',
-        ),
-        'display_highlight_image' => 0,
-        'highlight_image_style' => '',
-        'display_abstract_tooltip' => 0,
-        'display_author_tooltip' => 0,
-        'display_google_scholar_tooltip' => 1,
-        'display_pubmed_tooltip' => 1,
-        'display_advanced_search_tooltip' => 1,
-        'display_author_landing_page_tooltip' => 0,
-        'author_site_search_path' => 'search/',
-      ),
-    ),
-    'highwire_news_story' => array(
-      'selector' => 0,
-      'citation_style' => 'mla',
-      'cache_enabled' => 1,
-      'cache_time' => '600',
-      'title_type' => 'full',
-      'short_title_options' => array(
-        'char_count' => '50',
-        'add_ellipsis' => 0,
-      ),
-      'title_as_link' => 0,
-      'display_subtitle' => 0,
-      'choose_pubdate' => 'ppubdate',
-      'pubdate_format_type' => '',
-      'pubdate_format_custom' => '',
-      'display_markup_snippet' => '',
-      'highlight_image_toggle' => 0,
-      'display_original_link' => 0,
-      'display_access_indicator' => 0,
-      'access_indicator_settings' => array(
-        'open_access' => array(
-          'icon' => 'icon-unlock',
-          'title' => 'Open Access',
-        ),
-        'user_access' => array(
-          'icon' => 'icon-ok-sign',
-          'title' => 'You have access',
-        ),
-        'no_access' => array(
-          'icon' => 'icon-lock',
-          'title' => 'Restricted access',
-        ),
-      ),
-      'display_variants' => 0,
-      'display_supplements' => 0,
-      'display_variants_list_inline' => 1,
-      'pdf_download' => array(
-        'display_pdf_download' => 0,
-        'pdf_download_icon' => 'icon-cloud-download',
-        'pdf_download_text' => 'PDF',
-      ),
-      'cpath_prefix' => '',
-      'show_mark_citation' => 0,
-      'display_infotrieve_link' => 0,
-      'infotrieve_link_settings' => array(
-        'icon' => 'icon-usd',
-        'link_caption' => 'Order full text via Infotrieve',
-      ),
-      'display_highlight_image' => '0',
-      'highlight_image_style' => '',
-      'featured_image_click_image' => 'nothing',
-      'display_author_tooltip' => 0,
-      'display_google_scholar_tooltip' => 0,
-      'display_pubmed_tooltip' => 0,
-      'display_advanced_search_tooltip' => 0,
-    ),
-    'highwire_book_edition' => array(
-      'selector' => 0,
-      'citation_style' => 'folio_books_standard',
-      'cache_enabled' => 1,
-      'cache_time' => '600',
-      'title_type' => 'full',
-      'short_title_options' => array(
-        'char_count' => '50',
-        'add_ellipsis' => 0,
-      ),
-      'title_as_link' => 0,
-      'display_subtitle' => 0,
-      'choose_pubdate' => 'ppubdate',
-      'pubdate_format_type' => '',
-      'pubdate_format_custom' => '',
-      'display_markup_snippet' => '',
-      'highlight_image_toggle' => 0,
-      'display_original_link' => 0,
-      'display_access_indicator' => 0,
-      'access_indicator_settings' => array(
-        'open_access' => array(
-          'icon' => 'icon-unlock',
-          'title' => 'Open Access',
-        ),
-        'user_access' => array(
-          'icon' => 'icon-ok-sign',
-          'title' => 'You have access',
-        ),
-        'no_access' => array(
-          'icon' => 'icon-lock',
-          'title' => 'Restricted access',
-        ),
-      ),
-      'display_variants' => 0,
-      'display_supplements' => 0,
-      'display_variants_list_inline' => 1,
-      'pdf_download' => array(
-        'display_pdf_download' => 0,
-        'pdf_download_icon' => 'icon-cloud-download',
-        'pdf_download_text' => 'PDF',
-      ),
-      'cpath_prefix' => '',
-      'show_mark_citation' => 0,
-      'display_infotrieve_link' => 0,
-      'infotrieve_link_settings' => array(
-        'icon' => 'icon-usd',
-        'link_caption' => 'Order full text via Infotrieve',
-      ),
-      'display_highlight_image' => 0,
-      'highlight_image_style' => '',
-      'display_author_tooltip' => 0,
-      'display_google_scholar_tooltip' => 1,
-      'display_pubmed_tooltip' => 1,
-      'display_advanced_search_tooltip' => 1,
-      'display_author_landing_page_tooltip' => 1,
-      'display_orcid_tooltip' => 1,
-      'author_site_search_path' => 'search/',
-    ),
-    'highwire_article' => array(
-      'selector' => 0,
-      'citation_style' => 'mla',
-      'cache_enabled' => 1,
-      'cache_time' => '600',
-      'title_type' => 'full',
-      'short_title_options' => array(
-        'char_count' => '50',
-        'add_ellipsis' => 0,
-      ),
-      'title_as_link' => 0,
-      'display_subtitle' => 0,
-      'choose_pubdate' => 'ppubdate',
-      'pubdate_format_type' => '',
-      'pubdate_format_custom' => '',
-      'display_markup_snippet' => '',
-      'highlight_image_toggle' => 0,
-      'display_original_link' => 0,
-      'display_access_indicator' => 0,
-      'access_indicator_settings' => array(
-        'open_access' => array(
-          'icon' => 'icon-unlock',
-          'title' => 'Open Access',
-        ),
-        'user_access' => array(
-          'icon' => 'icon-ok-sign',
-          'title' => 'You have access',
-        ),
-        'no_access' => array(
-          'icon' => 'icon-lock',
-          'title' => 'Restricted access',
-        ),
-      ),
-      'display_variants' => 0,
-      'display_supplements' => 0,
-      'display_variants_list_inline' => 1,
-      'pdf_download' => array(
-        'display_pdf_download' => 0,
-        'pdf_download_icon' => 'icon-cloud-download',
-        'pdf_download_text' => 'PDF',
-      ),
-      'cpath_prefix' => '',
-      'show_mark_citation' => 0,
-      'display_infotrieve_link' => 0,
-      'infotrieve_link_settings' => array(
-        'icon' => 'icon-usd',
-        'link_caption' => 'Order full text via Infotrieve',
-      ),
-      'display_highlight_image' => '0',
-      'highlight_image_style' => '',
-      'featured_image_variant' => 'large',
-      'featured_image_click_image' => 'nothing',
-      'display_cme_link' => 0,
-      'display_cme_link_attributes' => array(
-        'target' => '',
-      ),
-      'display_abstract_tooltip' => 0,
-      'display_contributors' => 0,
-      'include_on_behalf' => 0,
-      'display_orcid_icon' => 0,
-      'display_author_settings' => array(
-        'author_format_type' => '_custom',
-        'author_format_custom' => 'f lc',
-        'separator' => ', ',
-        'and' => 0,
-      ),
-      'display_author_types' => array(
-        'author' => 0,
-        'editor' => 0,
-        'group-author' => 0,
-        'guest-editor' => 0,
-        'presenter' => 0,
-        'translator' => 0,
-        'reviewer' => 0,
-      ),
-      'display_author_types_settings' => array(
-        'author' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'editor' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'group-author' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'guest-editor' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'presenter' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'translator' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'reviewer' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-      ),
-      'display_author_tooltip' => 0,
-      'display_google_scholar_tooltip' => 1,
-      'display_pubmed_tooltip' => 1,
-      'display_advanced_search_tooltip' => 1,
-      'display_author_landing_page_tooltip' => 1,
-      'display_orcid_tooltip' => 1,
-      'display_ads_search_tooltip' => 0,
-      'display_agricola_tooltip' => 0,
-      'author_site_search_path' => 'search/',
-      'display_translations' => 0,
-      'display_translations_text' => 'Translations Available',
-      'display_translations_text_icon' => 'icon-globe',
-    ),
-    'highwire_issue' => array(
-      'selector' => 0,
-      'citation_style' => 'mla',
-      'cache_enabled' => 1,
-      'cache_time' => '600',
-      'title_type' => 'full',
-      'short_title_options' => array(
-        'char_count' => '50',
-        'add_ellipsis' => 0,
-      ),
-      'title_as_link' => 0,
-      'display_subtitle' => 0,
-      'choose_pubdate' => 'ppubdate',
-      'pubdate_format_type' => '',
-      'pubdate_format_custom' => '',
-      'display_markup_snippet' => '',
-      'highlight_image_toggle' => 0,
-      'display_original_link' => 0,
-      'display_access_indicator' => 0,
-      'access_indicator_settings' => array(
-        'open_access' => array(
-          'icon' => 'icon-unlock',
-          'title' => 'Open Access',
-        ),
-        'user_access' => array(
-          'icon' => 'icon-ok-sign',
-          'title' => 'You have access',
-        ),
-        'no_access' => array(
-          'icon' => 'icon-lock',
-          'title' => 'Restricted access',
-        ),
-      ),
-      'display_variants' => 0,
-      'display_supplements' => 0,
-      'display_variants_list_inline' => 1,
-      'pdf_download' => array(
-        'display_pdf_download' => 0,
-        'pdf_download_icon' => 'icon-cloud-download',
-        'pdf_download_text' => 'PDF',
-      ),
-      'cpath_prefix' => '',
-      'show_mark_citation' => 0,
-      'display_infotrieve_link' => 0,
-      'infotrieve_link_settings' => array(
-        'icon' => 'icon-usd',
-        'link_caption' => 'Order full text via Infotrieve',
-      ),
-      'display_highlight_image' => 0,
-      'highlight_image_style' => '',
-      'featured_image_click_image' => 'nothing',
-      'display_contributors' => 0,
-      'include_on_behalf' => 1,
-      'display_orcid_icon' => 0,
-      'display_author_settings' => array(
-        'author_format_type' => '_custom',
-        'author_format_custom' => 'f lc',
-        'separator' => ', ',
-        'and' => 0,
-      ),
-      'display_author_types' => array(
-        'author' => 0,
-        'editor' => 0,
-        'group-author' => 0,
-        'guest-editor' => 0,
-        'presenter' => 0,
-        'translator' => 0,
-        'reviewer' => 0,
-      ),
-      'display_author_types_settings' => array(
-        'author' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'editor' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'group-author' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'guest-editor' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'presenter' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'translator' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'reviewer' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-      ),
-      'display_author_tooltip' => 0,
-      'display_google_scholar_tooltip' => 1,
-      'display_pubmed_tooltip' => 1,
-      'display_advanced_search_tooltip' => 1,
-      'display_author_landing_page_tooltip' => 0,
-      'display_orcid_tooltip' => 1,
-      'author_site_search_path' => 'search/',
-    ),
-    'highwire_comment' => array(
-      'selector' => 0,
-      'citation_style' => 'highwire_comment',
-      'show_title' => 0,
-      'title_as_link' => 0,
-      'title_as_link_type' => 'tab_view',
-      'add_title_anchor' => 0,
-      'author_format_type' => 'fullname',
-      'author_format_custom' => '',
-      'author_list_separator' => ', ',
-      'date_label' => '',
-      'date_format_type' => 'custom',
-      'date_format' => '(j F Y)',
-      'display_comment_body' => 1,
-      'style_comment_body' => array(
-        'enable_show_more_link' => 1,
-        'show_more_link_title' => 'Show More',
-        'show_less_link_title' => 'Show Less',
-        'full_text_body_length' => '1500',
-      ),
-      'display_attachment' => 1,
-      'display_conflict_of_interest' => 1,
-    ),
-    'highwire_fragment' => array(
-      'selector' => 0,
-      'citation_style' => 'jcore_title_and_author',
-      'cache_enabled' => 1,
-      'cache_time' => '600',
-      'title_type' => 'full',
-      'short_title_options' => array(
-        'char_count' => '50',
-        'add_ellipsis' => 0,
-      ),
-      'title_as_link' => 0,
-      'display_subtitle' => 0,
-      'choose_pubdate' => 'ppubdate',
-      'pubdate_format_type' => '',
-      'pubdate_format_custom' => '',
-      'display_markup_snippet' => '',
-      'highlight_image_toggle' => 0,
-      'display_original_link' => 0,
-      'display_access_indicator' => '0',
-      'access_indicator_settings' => array(
-        'open_access' => array(
-          'icon' => 'icon-unlock',
-          'title' => 'Open Access',
-        ),
-        'user_access' => array(
-          'icon' => 'icon-ok-sign',
-          'title' => 'You have access',
-        ),
-        'no_access' => array(
-          'icon' => 'icon-lock',
-          'title' => 'Restricted access',
-        ),
-      ),
-      'display_variants' => 0,
-      'display_supplements' => 0,
-      'display_variants_list_inline' => 1,
-      'pdf_download' => array(
-        'display_pdf_download' => 0,
-        'pdf_download_icon' => 'icon-cloud-download',
-        'pdf_download_text' => 'PDF',
-      ),
-      'cpath_prefix' => '',
-      'show_mark_citation' => 0,
-      'display_infotrieve_link' => 0,
-      'infotrieve_link_settings' => array(
-        'icon' => 'icon-usd',
-        'link_caption' => 'Order full text via Infotrieve',
-      ),
-      'display_highlight_image' => 0,
-      'highlight_image_style' => '',
-      'display_fragment_caption' => 1,
-      'enable_show_more_link' => array(
-        'is_checked_enable_show_more_link' => 0,
-        'show_more_link_title' => 'Show More',
-        'show_less_link_title' => 'Show Less',
-        'snippet_max_length' => '150',
-      ),
-      'fragment_image_settings' => array(
-        'fragment_image_variant' => 'medium',
-        'fragment_click_image' => 'colorbox',
-        'show_download_links' => 1,
-      ),
-      'display_parent_citation' => 1,
-      'parent_citation_type' => 'highwire_article',
-      'parent_citation_settings' => array(
-        'citation_style' => 'mla',
-        'cache_enabled' => 1,
-        'cache_time' => '600',
-        'title_type' => 'full',
-        'short_title_options' => array(
-          'char_count' => '50',
-          'add_ellipsis' => 0,
-        ),
-        'title_as_link' => 0,
-        'display_subtitle' => 0,
-        'choose_pubdate' => 'ppubdate',
-        'pubdate_format_type' => '',
-        'pubdate_format_custom' => '',
-        'display_markup_snippet' => '',
-        'highlight_image_toggle' => 0,
-        'display_original_link' => 0,
-        'display_access_indicator' => 0,
-        'access_indicator_settings' => array(
-          'open_access' => array(
-            'icon' => 'icon-unlock',
-            'title' => 'Open Access',
-          ),
-          'user_access' => array(
-            'icon' => 'icon-ok-sign',
-            'title' => 'You have access',
-          ),
-          'no_access' => array(
-            'icon' => 'icon-lock',
-            'title' => 'Restricted access',
-          ),
-        ),
-        'display_variants' => 0,
-        'display_supplements' => 0,
-        'display_variants_list_inline' => 1,
-        'pdf_download' => array(
-          'display_pdf_download' => 0,
-          'pdf_download_icon' => 'icon-cloud-download',
-          'pdf_download_text' => 'PDF',
-        ),
-        'cpath_prefix' => '',
-        'show_mark_citation' => 0,
-        'display_infotrieve_link' => 0,
-        'infotrieve_link_settings' => array(
-          'icon' => 'icon-usd',
-          'link_caption' => 'Order full text via Infotrieve',
-        ),
-        'display_highlight_image' => '0',
-        'highlight_image_style' => '',
-        'featured_image_variant' => 'large',
-        'featured_image_click_image' => 'nothing',
-        'display_cme_link' => 0,
-        'display_cme_link_attributes' => array(
-          'target' => '',
-        ),
-        'display_abstract_tooltip' => 0,
-        'display_contributors' => 0,
-        'include_on_behalf' => 0,
-        'display_orcid_icon' => 0,
-        'display_author_settings' => array(
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-        ),
-        'display_author_types' => array(
-          'author' => 0,
-          'editor' => 0,
-          'group-author' => 0,
-          'guest-editor' => 0,
-          'presenter' => 0,
-          'translator' => 0,
-          'reviewer' => 0,
-        ),
-        'display_author_types_settings' => array(
-          'author' => array(
-            'label_display' => 0,
-            'label' => '',
-            'author_format_type' => '_custom',
-            'author_format_custom' => 'f lc',
-            'separator' => ', ',
-            'and' => 0,
-            'show-orcid-icon' => 0,
-          ),
-          'editor' => array(
-            'label_display' => 0,
-            'label' => '',
-            'author_format_type' => '_custom',
-            'author_format_custom' => 'f lc',
-            'separator' => ', ',
-            'and' => 0,
-            'show-orcid-icon' => 0,
-          ),
-          'group-author' => array(
-            'label_display' => 0,
-            'label' => '',
-            'author_format_type' => '_custom',
-            'author_format_custom' => 'f lc',
-            'separator' => ', ',
-            'and' => 0,
-            'show-orcid-icon' => 0,
-          ),
-          'guest-editor' => array(
-            'label_display' => 0,
-            'label' => '',
-            'author_format_type' => '_custom',
-            'author_format_custom' => 'f lc',
-            'separator' => ', ',
-            'and' => 0,
-            'show-orcid-icon' => 0,
-          ),
-          'presenter' => array(
-            'label_display' => 0,
-            'label' => '',
-            'author_format_type' => '_custom',
-            'author_format_custom' => 'f lc',
-            'separator' => ', ',
-            'and' => 0,
-            'show-orcid-icon' => 0,
-          ),
-          'translator' => array(
-            'label_display' => 0,
-            'label' => '',
-            'author_format_type' => '_custom',
-            'author_format_custom' => 'f lc',
-            'separator' => ', ',
-            'and' => 0,
-            'show-orcid-icon' => 0,
-          ),
-          'reviewer' => array(
-            'label_display' => 0,
-            'label' => '',
-            'author_format_type' => '_custom',
-            'author_format_custom' => 'f lc',
-            'separator' => ', ',
-            'and' => 0,
-            'show-orcid-icon' => 0,
-          ),
-        ),
-        'display_author_tooltip' => 0,
-        'display_google_scholar_tooltip' => 1,
-        'display_pubmed_tooltip' => 1,
-        'display_advanced_search_tooltip' => 1,
-        'display_author_landing_page_tooltip' => 1,
-        'display_orcid_tooltip' => 1,
-        'display_ads_search_tooltip' => 0,
-        'display_agricola_tooltip' => 0,
-        'author_site_search_path' => 'search/',
-        'display_translations' => 0,
-        'display_translations_text' => 'Translations Available',
-        'display_translations_text_icon' => 'icon-globe',
-      ),
-    ),
-    'highwire_book_section' => array(
-      'selector' => 0,
-      'citation_style' => 'folio_book_sections_standard',
-      'cache_enabled' => 1,
-      'cache_time' => '600',
-      'title_type' => 'full',
-      'short_title_options' => array(
-        'char_count' => '50',
-        'add_ellipsis' => 0,
-      ),
-      'title_as_link' => 0,
-      'display_subtitle' => 0,
-      'choose_pubdate' => 'ppubdate',
-      'pubdate_format_type' => '',
-      'pubdate_format_custom' => '',
-      'display_markup_snippet' => '',
-      'highlight_image_toggle' => 0,
-      'display_original_link' => 0,
-      'display_access_indicator' => 0,
-      'access_indicator_settings' => array(
-        'open_access' => array(
-          'icon' => 'icon-unlock',
-          'title' => 'Open Access',
-        ),
-        'user_access' => array(
-          'icon' => 'icon-ok-sign',
-          'title' => 'You have access',
-        ),
-        'no_access' => array(
-          'icon' => 'icon-lock',
-          'title' => 'Restricted access',
-        ),
-      ),
-      'display_variants' => 0,
-      'display_supplements' => 0,
-      'display_variants_list_inline' => 1,
-      'pdf_download' => array(
-        'display_pdf_download' => 0,
-        'pdf_download_icon' => 'icon-cloud-download',
-        'pdf_download_text' => 'PDF',
-      ),
-      'cpath_prefix' => '',
-      'show_mark_citation' => 0,
-      'display_infotrieve_link' => 0,
-      'infotrieve_link_settings' => array(
-        'icon' => 'icon-usd',
-        'link_caption' => 'Order full text via Infotrieve',
-      ),
-      'display_highlight_image' => 0,
-      'highlight_image_style' => '',
-      'display_abstract_tooltip' => 0,
-      'display_author_tooltip' => 0,
-      'display_google_scholar_tooltip' => 1,
-      'display_pubmed_tooltip' => 1,
-      'display_advanced_search_tooltip' => 1,
-      'display_author_landing_page_tooltip' => 0,
-      'author_site_search_path' => 'search/',
-    ),
-    'highwire_journal' => array(
-      'selector' => 0,
-      'citation_style' => 'mla',
-      'cache_enabled' => 1,
-      'cache_time' => '600',
-      'title_type' => 'full',
-      'short_title_options' => array(
-        'char_count' => '50',
-        'add_ellipsis' => 0,
-      ),
-      'title_as_link' => 0,
-      'display_subtitle' => 0,
-      'choose_pubdate' => 'ppubdate',
-      'pubdate_format_type' => '',
-      'pubdate_format_custom' => '',
-      'display_markup_snippet' => '',
-      'highlight_image_toggle' => 0,
-      'display_original_link' => 0,
-      'display_access_indicator' => 0,
-      'access_indicator_settings' => array(
-        'open_access' => array(
-          'icon' => 'icon-unlock',
-          'title' => 'Open Access',
-        ),
-        'user_access' => array(
-          'icon' => 'icon-ok-sign',
-          'title' => 'You have access',
-        ),
-        'no_access' => array(
-          'icon' => 'icon-lock',
-          'title' => 'Restricted access',
-        ),
-      ),
-      'display_variants' => 0,
-      'display_supplements' => 0,
-      'display_variants_list_inline' => 1,
-      'pdf_download' => array(
-        'display_pdf_download' => 0,
-        'pdf_download_icon' => 'icon-cloud-download',
-        'pdf_download_text' => 'PDF',
-      ),
-      'cpath_prefix' => '',
-      'show_mark_citation' => 0,
-      'display_infotrieve_link' => 0,
-      'infotrieve_link_settings' => array(
-        'icon' => 'icon-usd',
-        'link_caption' => 'Order full text via Infotrieve',
-      ),
-      'display_highlight_image' => 0,
-      'highlight_image_style' => '',
-      'display_author_tooltip' => 0,
-      'display_google_scholar_tooltip' => 1,
-      'display_pubmed_tooltip' => 1,
-      'display_advanced_search_tooltip' => 1,
-      'display_author_landing_page_tooltip' => 0,
-      'display_orcid_tooltip' => 1,
-      'author_site_search_path' => 'search/',
-    ),
-  );
-  $handler->display->display_options['row_plugin'] = 'node';
-  /* Footer: View More link */
-  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
-  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
-  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
-  $handler->display->display_options['footer']['area_text_custom']['ui_name'] = 'View More link';
-  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="hw-pap-more-link text-right">
-<a class="hw-view-more" href="/content/early/recent">View more <span class="element-invisible">published ahead of print articles</span><i class="icon-circle-arrow-right"></i></a>
-</div>';
-  /* Field: Content: Node ID */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'efq_node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Content: Electronic Publication Date » Start date */
-  $handler->display->display_options['sorts']['field_highwire_a_epubdate_value']['id'] = 'field_highwire_a_epubdate_value';
-  $handler->display->display_options['sorts']['field_highwire_a_epubdate_value']['table'] = 'efq_node';
-  $handler->display->display_options['sorts']['field_highwire_a_epubdate_value']['field'] = 'field_highwire_a_epubdate_value';
-  $handler->display->display_options['sorts']['field_highwire_a_epubdate_value']['order'] = 'DESC';
-  /* Sort criterion: Content: Node ID */
-  $handler->display->display_options['sorts']['nid']['id'] = 'nid';
-  $handler->display->display_options['sorts']['nid']['table'] = 'efq_node';
-  $handler->display->display_options['sorts']['nid']['field'] = 'nid';
-  $handler->display->display_options['sorts']['nid']['order'] = 'DESC';
-  /* Contextual filter: Content: Journal */
-  $handler->display->display_options['arguments']['field_highwire_a_journal']['id'] = 'field_highwire_a_journal';
-  $handler->display->display_options['arguments']['field_highwire_a_journal']['table'] = 'efq_node';
-  $handler->display->display_options['arguments']['field_highwire_a_journal']['field'] = 'field_highwire_a_journal';
-  $handler->display->display_options['arguments']['field_highwire_a_journal']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['field_highwire_a_journal']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_highwire_a_journal']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_highwire_a_journal']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_highwire_a_journal']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Content: Version Type */
-  $handler->display->display_options['filters']['field_highwire_article_ver']['id'] = 'field_highwire_article_ver';
-  $handler->display->display_options['filters']['field_highwire_article_ver']['table'] = 'efq_node';
-  $handler->display->display_options['filters']['field_highwire_article_ver']['field'] = 'field_highwire_article_ver';
-  $handler->display->display_options['filters']['field_highwire_article_ver']['value'] = array(
-    'curr' => 'curr',
-  );
-  $handler->display->display_options['filters']['field_highwire_article_ver']['delta'] = '';
-  /* Filter criterion: Content: Early Release */
-  $handler->display->display_options['filters']['field_highwire_article_early']['id'] = 'field_highwire_article_early';
-  $handler->display->display_options['filters']['field_highwire_article_early']['table'] = 'efq_node';
-  $handler->display->display_options['filters']['field_highwire_article_early']['field'] = 'field_highwire_article_early';
-  $handler->display->display_options['filters']['field_highwire_article_early']['value'] = array(
-    1 => '1',
-  );
-  $handler->display->display_options['filters']['field_highwire_article_early']['delta'] = '';
-  /* Filter criterion: Content: Content type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'efq_node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'highwire_article' => 'highwire_article',
-  );
-  /* Filter criterion: Content: Status */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'efq_node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value']['value'] = '1';
-
-  /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['pane_title'] = 'Highwire PAP List';
-  $handler->display->display_options['allow']['use_pager'] = 0;
-  $handler->display->display_options['allow']['items_per_page'] = 0;
-  $handler->display->display_options['allow']['offset'] = 0;
-  $handler->display->display_options['allow']['link_to_view'] = 0;
-  $handler->display->display_options['allow']['more_link'] = 0;
-  $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 0;
-  $handler->display->display_options['allow']['exposed_form'] = 0;
-  $handler->display->display_options['allow']['fields_override'] = 0;
-  $handler->display->display_options['argument_input'] = array(
-    'field_highwire_a_journal' => array(
-      'type' => 'context',
-      'context' => 'default_journal.nid',
-      'context_optional' => 0,
-      'panel' => '0',
-      'fixed' => '',
-      'label' => 'Node: Journal',
-    ),
-  );
-  $translatables['jnl_isa_pap_list'] = array(
-    t('Master'),
-    t('Published Ahead of Print'),
-    t('View more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('<div class="hw-pap-more-link text-right">
-<a class="hw-view-more" href="/content/early/recent">View more <span class="element-invisible">published ahead of print articles</span><i class="icon-circle-arrow-right"></i></a>
-</div>'),
-    t('Node ID'),
-    t('.'),
-    t(','),
-    t('All'),
-    t('Content pane'),
-    t('more'),
-    t('Highwire PAP List'),
-    t('View panes'),
-  );
-  $export['jnl_isa_pap_list'] = $view;
-
-  $view = new view();
-  $view->name = 'jnl_isa_top_topics';
-  $view->description = 'Display a list of all nodes in queue \'isa Top Topics\'';
-  $view->tag = 'isa Home Page';
-  $view->base_table = 'node';
-  $view->human_name = 'Queue \'isa Top Topics\'';
-  $view->core = 0;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Defaults */
-  $handler = $view->new_display('default', 'Defaults', 'default');
-  $handler->display->display_options['title'] = 'Top Topics';
-  $handler->display->display_options['use_more'] = TRUE;
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'none';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'node';
-  /* Relationship: Nodequeue: Queue */
-  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
-  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
-  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
-  $handler->display->display_options['relationships']['nodequeue_rel']['required'] = TRUE;
-  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = TRUE;
-  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
-    'jnl_isa_top_topics' => 'jnl_isa_top_topics',
-  );
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  /* Sort criterion: Nodequeue: Position */
-  $handler->display->display_options['sorts']['position']['id'] = 'position';
-  $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
-  $handler->display->display_options['sorts']['position']['field'] = 'position';
-  $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
-  /* Filter criterion: Content: Published or admin */
-  $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
-  $handler->display->display_options['filters']['status_extra']['table'] = 'node';
-  $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
-  $handler->display->display_options['filters']['status_extra']['group'] = 0;
-  $handler->display->display_options['filters']['status_extra']['expose']['operator'] = FALSE;
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['block_description'] = 'isa Top Topics';
-  $translatables['jnl_isa_top_topics'] = array(
-    t('Defaults'),
-    t('Top Topics'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('queue'),
-    t('Block'),
-    t('isa Top Topics'),
-  );
-  $export['jnl_isa_top_topics'] = $view;
-
-  $view = new view();
   $view->name = 'hw_article_carousel';
   $view->description = '';
   $view->tag = 'default';
@@ -1348,7 +175,7 @@ function jnl_isa_home_page_views_default_views() {
   $handler->display->display_options['sorts']['position']['field'] = 'position';
   $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
   $handler->display->display_options['sorts']['position']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Content: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -1379,6 +206,226 @@ function jnl_isa_home_page_views_default_views() {
     t('Block'),
   );
   $export['hw_article_carousel'] = $view;
+
+  $view = new view();
+  $view->name = 'jnl_isa_pap_list';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'efq_node';
+  $view->human_name = 'isa PAP List';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Published Ahead of Print';
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'View more';
+  $handler->display->display_options['link_display'] = 'custom_url';
+  $handler->display->display_options['link_url'] = 'content/early/recent';
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'highwire_article_citation_list';
+  $handler->display->display_options['style_options']['citation_settings_source'] = 'corpus_config';
+  $handler->display->display_options['style_options']['citation_manager_wrapper'] = array(
+    'citation_manager_citation' => 'jcore_list_full',
+  );
+  $handler->display->display_options['style_options']['corpus_config_wrapper'] = array(
+    'corpus_config_citation_context' => 'full_browse',
+  );
+  $handler->display->display_options['row_plugin'] = 'node';
+  /* Footer: View More link */
+  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['ui_name'] = 'View More link';
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div class="hw-pap-more-link text-right">
+<a class="hw-view-more" href="/content/early/recent">View more <span class="element-invisible">published ahead of print articles</span><i class="icon-circle-arrow-right"></i></a>
+</div>';
+  /* Field: Content: Node ID */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'efq_node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  /* Sort criterion: Content: Electronic Publication Date » Start date */
+  $handler->display->display_options['sorts']['field_highwire_a_epubdate_value']['id'] = 'field_highwire_a_epubdate_value';
+  $handler->display->display_options['sorts']['field_highwire_a_epubdate_value']['table'] = 'efq_node';
+  $handler->display->display_options['sorts']['field_highwire_a_epubdate_value']['field'] = 'field_highwire_a_epubdate_value';
+  $handler->display->display_options['sorts']['field_highwire_a_epubdate_value']['order'] = 'DESC';
+  /* Sort criterion: Content: Node ID */
+  $handler->display->display_options['sorts']['nid']['id'] = 'nid';
+  $handler->display->display_options['sorts']['nid']['table'] = 'efq_node';
+  $handler->display->display_options['sorts']['nid']['field'] = 'nid';
+  $handler->display->display_options['sorts']['nid']['order'] = 'DESC';
+  /* Contextual filter: Content: Journal */
+  $handler->display->display_options['arguments']['field_highwire_a_journal']['id'] = 'field_highwire_a_journal';
+  $handler->display->display_options['arguments']['field_highwire_a_journal']['table'] = 'efq_node';
+  $handler->display->display_options['arguments']['field_highwire_a_journal']['field'] = 'field_highwire_a_journal';
+  $handler->display->display_options['arguments']['field_highwire_a_journal']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['field_highwire_a_journal']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_highwire_a_journal']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_highwire_a_journal']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_highwire_a_journal']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Version Type */
+  $handler->display->display_options['filters']['field_highwire_article_ver']['id'] = 'field_highwire_article_ver';
+  $handler->display->display_options['filters']['field_highwire_article_ver']['table'] = 'efq_node';
+  $handler->display->display_options['filters']['field_highwire_article_ver']['field'] = 'field_highwire_article_ver';
+  $handler->display->display_options['filters']['field_highwire_article_ver']['value'] = array(
+    'curr' => 'curr',
+  );
+  $handler->display->display_options['filters']['field_highwire_article_ver']['delta'] = '';
+  /* Filter criterion: Content: Early Release */
+  $handler->display->display_options['filters']['field_highwire_article_early']['id'] = 'field_highwire_article_early';
+  $handler->display->display_options['filters']['field_highwire_article_early']['table'] = 'efq_node';
+  $handler->display->display_options['filters']['field_highwire_article_early']['field'] = 'field_highwire_article_early';
+  $handler->display->display_options['filters']['field_highwire_article_early']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['filters']['field_highwire_article_early']['delta'] = '';
+  /* Filter criterion: Content: Content type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'efq_node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'highwire_article' => 'highwire_article',
+  );
+  /* Filter criterion: Content: Status */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'efq_node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value']['value'] = '1';
+
+  /* Display: Content pane */
+  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['pane_title'] = 'Highwire PAP List';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'field_highwire_a_journal' => array(
+      'type' => 'context',
+      'context' => 'default_journal.nid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Node: Journal',
+    ),
+  );
+  $translatables['jnl_isa_pap_list'] = array(
+    t('Master'),
+    t('Published Ahead of Print'),
+    t('View more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('<div class="hw-pap-more-link text-right">
+<a class="hw-view-more" href="/content/early/recent">View more <span class="element-invisible">published ahead of print articles</span><i class="icon-circle-arrow-right"></i></a>
+</div>'),
+    t('Node ID'),
+    t('.'),
+    t(','),
+    t('All'),
+    t('Content pane'),
+    t('more'),
+    t('Highwire PAP List'),
+    t('View panes'),
+  );
+  $export['jnl_isa_pap_list'] = $view;
+
+  $view = new view();
+  $view->name = 'jnl_isa_top_topics';
+  $view->description = 'Display a list of all nodes in queue \'isa Top Topics\'';
+  $view->tag = 'isa Home Page';
+  $view->base_table = 'node';
+  $view->human_name = 'Queue \'isa Top Topics\'';
+  $view->core = 0;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Defaults */
+  $handler = $view->new_display('default', 'Defaults', 'default');
+  $handler->display->display_options['title'] = 'Top Topics';
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'node';
+  /* Relationship: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['required'] = TRUE;
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = TRUE;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'jnl_isa_top_topics' => 'jnl_isa_top_topics',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  /* Sort criterion: Nodequeue: Position */
+  $handler->display->display_options['sorts']['position']['id'] = 'position';
+  $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['sorts']['position']['field'] = 'position';
+  $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
+  /* Filter criterion: Content: Published status or admin user */
+  $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
+  $handler->display->display_options['filters']['status_extra']['table'] = 'node';
+  $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
+  $handler->display->display_options['filters']['status_extra']['group'] = 0;
+  $handler->display->display_options['filters']['status_extra']['expose']['operator'] = FALSE;
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['block_description'] = 'isa Top Topics';
+  $translatables['jnl_isa_top_topics'] = array(
+    t('Defaults'),
+    t('Top Topics'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('queue'),
+    t('Block'),
+    t('isa Top Topics'),
+  );
+  $export['jnl_isa_top_topics'] = $view;
 
   $view = new view();
   $view->name = 'latest_articles';
@@ -1413,959 +460,6 @@ function jnl_isa_home_page_views_default_views() {
   );
   $handler->display->display_options['style_options']['corpus_config_wrapper'] = array(
     'corpus_config_citation_context' => 'full_browse',
-  );
-  $handler->display->display_options['style_options']['citation_style'] = 'jcore_standard';
-  $handler->display->display_options['style_options']['cache_enabled'] = 1;
-  $handler->display->display_options['style_options']['cache_time'] = '86400';
-  $handler->display->display_options['style_options']['title_type'] = 'full';
-  $handler->display->display_options['style_options']['short_title_options'] = array(
-    'char_count' => '',
-    'add_ellipsis' => 0,
-  );
-  $handler->display->display_options['style_options']['title_as_link'] = 1;
-  $handler->display->display_options['style_options']['display_subtitle'] = 1;
-  $handler->display->display_options['style_options']['choose_pubdate'] = 'epubdate';
-  $handler->display->display_options['style_options']['pubdate_format_type'] = '';
-  $handler->display->display_options['style_options']['pubdate_format_custom'] = '';
-  $handler->display->display_options['style_options']['display_markup_snippet'] = '';
-  $handler->display->display_options['style_options']['highlight_image_toggle'] = 0;
-  $handler->display->display_options['style_options']['display_original_link'] = 0;
-  $handler->display->display_options['style_options']['display_access_indicator'] = 0;
-  $handler->display->display_options['style_options']['access_indicator_settings'] = array(
-    'open_access' => array(
-      'icon' => 'icon-unlock-alt',
-      'title' => 'Open Access',
-    ),
-    'user_access' => array(
-      'icon' => 'icon-ok-sign',
-      'title' => 'You have access',
-    ),
-    'no_access' => array(
-      'icon' => '',
-      'title' => '',
-    ),
-  );
-  $handler->display->display_options['style_options']['display_variants'] = 0;
-  $handler->display->display_options['style_options']['display_supplements'] = 0;
-  $handler->display->display_options['style_options']['display_variants_list_inline'] = 0;
-  $handler->display->display_options['style_options']['pdf_download'] = array(
-    'display_pdf_download' => 0,
-    'pdf_download_icon' => '',
-    'pdf_download_text' => '',
-  );
-  $handler->display->display_options['style_options']['cpath_prefix'] = '/content';
-  $handler->display->display_options['style_options']['show_mark_citation'] = 0;
-  $handler->display->display_options['style_options']['display_infotrieve_link'] = 0;
-  $handler->display->display_options['style_options']['infotrieve_link_settings'] = array(
-    'icon' => '',
-    'link_caption' => '',
-  );
-  $handler->display->display_options['style_options']['bundle_overrides_checkboxes'] = array(
-    'highwire_book_fragment' => array(
-      'selector' => 0,
-    ),
-    'highwire_news_story' => array(
-      'selector' => 0,
-    ),
-    'highwire_book_edition' => array(
-      'selector' => 0,
-    ),
-    'highwire_article' => array(
-      'selector' => 0,
-    ),
-    'highwire_issue' => array(
-      'selector' => 0,
-    ),
-    'highwire_comment' => array(
-      'selector' => 0,
-    ),
-    'highwire_fragment' => array(
-      'selector' => 0,
-    ),
-    'highwire_book_section' => array(
-      'selector' => 0,
-    ),
-    'highwire_journal' => array(
-      'selector' => 0,
-    ),
-  );
-  $handler->display->display_options['style_options']['bundle_overrides'] = array(
-    'highwire_book_fragment' => array(
-      'selector' => 0,
-      'citation_style' => 'ama',
-      'cache_enabled' => 1,
-      'cache_time' => '600',
-      'title_type' => 'full',
-      'short_title_options' => array(
-        'char_count' => '50',
-        'add_ellipsis' => 0,
-      ),
-      'title_as_link' => 0,
-      'display_subtitle' => 0,
-      'choose_pubdate' => 'ppubdate',
-      'pubdate_format_type' => '',
-      'pubdate_format_custom' => '',
-      'display_markup_snippet' => '',
-      'highlight_image_toggle' => 0,
-      'display_original_link' => 0,
-      'display_access_indicator' => '0',
-      'access_indicator_settings' => array(
-        'open_access' => array(
-          'icon' => 'icon-unlock',
-          'title' => 'Open Access',
-        ),
-        'user_access' => array(
-          'icon' => 'icon-ok-sign',
-          'title' => 'You have access',
-        ),
-        'no_access' => array(
-          'icon' => 'icon-lock',
-          'title' => 'Restricted access',
-        ),
-      ),
-      'display_variants' => 0,
-      'display_supplements' => 0,
-      'display_variants_list_inline' => 1,
-      'pdf_download' => array(
-        'display_pdf_download' => 0,
-        'pdf_download_icon' => 'icon-cloud-download',
-        'pdf_download_text' => 'PDF',
-      ),
-      'cpath_prefix' => '/content',
-      'show_mark_citation' => 0,
-      'display_infotrieve_link' => 0,
-      'infotrieve_link_settings' => array(
-        'icon' => 'icon-usd',
-        'link_caption' => 'Order full text via Infotrieve',
-      ),
-      'display_highlight_image' => 0,
-      'highlight_image_style' => 'thumbnail',
-      'display_fragment_caption' => 1,
-      'display_parent_citation' => 1,
-      'parent_citation_type' => 'highwire_book_section',
-      'parent_citation_settings' => array(
-        'citation_style' => 'folio_book_sections_standard',
-        'cache_enabled' => 1,
-        'cache_time' => '600',
-        'title_type' => 'full',
-        'short_title_options' => array(
-          'char_count' => '50',
-          'add_ellipsis' => 0,
-        ),
-        'title_as_link' => 0,
-        'display_subtitle' => 0,
-        'choose_pubdate' => 'ppubdate',
-        'pubdate_format_type' => '',
-        'pubdate_format_custom' => '',
-        'display_markup_snippet' => '',
-        'highlight_image_toggle' => 0,
-        'display_original_link' => 0,
-        'display_access_indicator' => 0,
-        'access_indicator_settings' => array(
-          'open_access' => array(
-            'icon' => 'icon-unlock',
-            'title' => 'Open Access',
-          ),
-          'user_access' => array(
-            'icon' => 'icon-ok-sign',
-            'title' => 'You have access',
-          ),
-          'no_access' => array(
-            'icon' => 'icon-lock',
-            'title' => 'Restricted access',
-          ),
-        ),
-        'display_variants' => 0,
-        'display_supplements' => 0,
-        'display_variants_list_inline' => 1,
-        'pdf_download' => array(
-          'display_pdf_download' => 0,
-          'pdf_download_icon' => 'icon-cloud-download',
-          'pdf_download_text' => 'PDF',
-        ),
-        'cpath_prefix' => '/content',
-        'show_mark_citation' => 0,
-        'display_infotrieve_link' => 0,
-        'infotrieve_link_settings' => array(
-          'icon' => 'icon-usd',
-          'link_caption' => 'Order full text via Infotrieve',
-        ),
-        'display_highlight_image' => 0,
-        'highlight_image_style' => '',
-        'display_abstract_tooltip' => 0,
-        'display_author_tooltip' => 0,
-        'display_google_scholar_tooltip' => 1,
-        'display_pubmed_tooltip' => 1,
-        'display_advanced_search_tooltip' => 1,
-        'display_author_landing_page_tooltip' => 0,
-        'author_site_search_path' => 'search/',
-      ),
-    ),
-    'highwire_news_story' => array(
-      'selector' => 0,
-      'citation_style' => 'mla',
-      'cache_enabled' => 1,
-      'cache_time' => '600',
-      'title_type' => 'full',
-      'short_title_options' => array(
-        'char_count' => '50',
-        'add_ellipsis' => 0,
-      ),
-      'title_as_link' => 0,
-      'display_subtitle' => 0,
-      'choose_pubdate' => 'ppubdate',
-      'pubdate_format_type' => '',
-      'pubdate_format_custom' => '',
-      'display_markup_snippet' => '',
-      'highlight_image_toggle' => 0,
-      'display_original_link' => 0,
-      'display_access_indicator' => 0,
-      'access_indicator_settings' => array(
-        'open_access' => array(
-          'icon' => 'icon-unlock',
-          'title' => 'Open Access',
-        ),
-        'user_access' => array(
-          'icon' => 'icon-ok-sign',
-          'title' => 'You have access',
-        ),
-        'no_access' => array(
-          'icon' => 'icon-lock',
-          'title' => 'Restricted access',
-        ),
-      ),
-      'display_variants' => 0,
-      'display_supplements' => 0,
-      'display_variants_list_inline' => 1,
-      'pdf_download' => array(
-        'display_pdf_download' => 0,
-        'pdf_download_icon' => 'icon-cloud-download',
-        'pdf_download_text' => 'PDF',
-      ),
-      'cpath_prefix' => '/content',
-      'show_mark_citation' => 0,
-      'display_infotrieve_link' => 0,
-      'infotrieve_link_settings' => array(
-        'icon' => 'icon-usd',
-        'link_caption' => 'Order full text via Infotrieve',
-      ),
-      'display_highlight_image' => '0',
-      'highlight_image_style' => '',
-      'featured_image_click_image' => 'nothing',
-      'display_author_tooltip' => 0,
-      'display_google_scholar_tooltip' => 0,
-      'display_pubmed_tooltip' => 0,
-      'display_advanced_search_tooltip' => 0,
-    ),
-    'highwire_book_edition' => array(
-      'selector' => 0,
-      'citation_style' => 'folio_books_standard',
-      'cache_enabled' => 1,
-      'cache_time' => '600',
-      'title_type' => 'full',
-      'short_title_options' => array(
-        'char_count' => '50',
-        'add_ellipsis' => 0,
-      ),
-      'title_as_link' => 0,
-      'display_subtitle' => 0,
-      'choose_pubdate' => 'ppubdate',
-      'pubdate_format_type' => '',
-      'pubdate_format_custom' => '',
-      'display_markup_snippet' => '',
-      'highlight_image_toggle' => 0,
-      'display_original_link' => 0,
-      'display_access_indicator' => 0,
-      'access_indicator_settings' => array(
-        'open_access' => array(
-          'icon' => 'icon-unlock',
-          'title' => 'Open Access',
-        ),
-        'user_access' => array(
-          'icon' => 'icon-ok-sign',
-          'title' => 'You have access',
-        ),
-        'no_access' => array(
-          'icon' => 'icon-lock',
-          'title' => 'Restricted access',
-        ),
-      ),
-      'display_variants' => 0,
-      'display_supplements' => 0,
-      'display_variants_list_inline' => 1,
-      'pdf_download' => array(
-        'display_pdf_download' => 0,
-        'pdf_download_icon' => 'icon-cloud-download',
-        'pdf_download_text' => 'PDF',
-      ),
-      'cpath_prefix' => '/content',
-      'show_mark_citation' => 0,
-      'display_infotrieve_link' => 0,
-      'infotrieve_link_settings' => array(
-        'icon' => 'icon-usd',
-        'link_caption' => 'Order full text via Infotrieve',
-      ),
-      'display_highlight_image' => 0,
-      'highlight_image_style' => '',
-      'display_author_tooltip' => 0,
-      'display_google_scholar_tooltip' => 1,
-      'display_pubmed_tooltip' => 1,
-      'display_advanced_search_tooltip' => 1,
-      'display_author_landing_page_tooltip' => 1,
-      'display_orcid_tooltip' => 1,
-      'author_site_search_path' => 'search/',
-    ),
-    'highwire_article' => array(
-      'selector' => 0,
-      'citation_style' => 'mla',
-      'cache_enabled' => 1,
-      'cache_time' => '600',
-      'title_type' => 'full',
-      'short_title_options' => array(
-        'char_count' => '50',
-        'add_ellipsis' => 0,
-      ),
-      'title_as_link' => 0,
-      'display_subtitle' => 0,
-      'choose_pubdate' => 'ppubdate',
-      'pubdate_format_type' => '',
-      'pubdate_format_custom' => '',
-      'display_markup_snippet' => '',
-      'highlight_image_toggle' => 0,
-      'display_original_link' => 0,
-      'display_access_indicator' => 0,
-      'access_indicator_settings' => array(
-        'open_access' => array(
-          'icon' => 'icon-unlock',
-          'title' => 'Open Access',
-        ),
-        'user_access' => array(
-          'icon' => 'icon-ok-sign',
-          'title' => 'You have access',
-        ),
-        'no_access' => array(
-          'icon' => 'icon-lock',
-          'title' => 'Restricted access',
-        ),
-      ),
-      'display_variants' => 0,
-      'display_supplements' => 0,
-      'display_variants_list_inline' => 1,
-      'pdf_download' => array(
-        'display_pdf_download' => 0,
-        'pdf_download_icon' => 'icon-cloud-download',
-        'pdf_download_text' => 'PDF',
-      ),
-      'cpath_prefix' => '/content',
-      'show_mark_citation' => 0,
-      'display_infotrieve_link' => 0,
-      'infotrieve_link_settings' => array(
-        'icon' => 'icon-usd',
-        'link_caption' => 'Order full text via Infotrieve',
-      ),
-      'display_highlight_image' => '0',
-      'highlight_image_style' => '',
-      'featured_image_variant' => 'large',
-      'featured_image_click_image' => 'nothing',
-      'display_cme_link' => 0,
-      'display_cme_link_attributes' => array(
-        'target' => '',
-      ),
-      'display_abstract_tooltip' => 0,
-      'display_contributors' => 0,
-      'include_on_behalf' => 0,
-      'display_orcid_icon' => 0,
-      'display_author_settings' => array(
-        'author_format_type' => '_custom',
-        'author_format_custom' => 'f lc',
-        'separator' => ', ',
-        'and' => 0,
-      ),
-      'display_author_types' => array(
-        'author' => 0,
-        'editor' => 0,
-        'group-author' => 0,
-        'guest-editor' => 0,
-        'presenter' => 0,
-        'translator' => 0,
-        'reviewer' => 0,
-      ),
-      'display_author_types_settings' => array(
-        'author' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'editor' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'group-author' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'guest-editor' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'presenter' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'translator' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'reviewer' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-      ),
-      'display_author_tooltip' => 0,
-      'display_google_scholar_tooltip' => 1,
-      'display_pubmed_tooltip' => 1,
-      'display_advanced_search_tooltip' => 1,
-      'display_author_landing_page_tooltip' => 1,
-      'display_orcid_tooltip' => 1,
-      'display_ads_search_tooltip' => 0,
-      'display_agricola_tooltip' => 0,
-      'author_site_search_path' => 'search/',
-      'display_translations' => 0,
-      'display_translations_text' => 'Translations Available',
-      'display_translations_text_icon' => 'icon-globe',
-    ),
-    'highwire_issue' => array(
-      'selector' => 0,
-      'citation_style' => 'mla',
-      'cache_enabled' => 1,
-      'cache_time' => '600',
-      'title_type' => 'full',
-      'short_title_options' => array(
-        'char_count' => '50',
-        'add_ellipsis' => 0,
-      ),
-      'title_as_link' => 0,
-      'display_subtitle' => 0,
-      'choose_pubdate' => 'ppubdate',
-      'pubdate_format_type' => '',
-      'pubdate_format_custom' => '',
-      'display_markup_snippet' => '',
-      'highlight_image_toggle' => 0,
-      'display_original_link' => 0,
-      'display_access_indicator' => 0,
-      'access_indicator_settings' => array(
-        'open_access' => array(
-          'icon' => 'icon-unlock',
-          'title' => 'Open Access',
-        ),
-        'user_access' => array(
-          'icon' => 'icon-ok-sign',
-          'title' => 'You have access',
-        ),
-        'no_access' => array(
-          'icon' => 'icon-lock',
-          'title' => 'Restricted access',
-        ),
-      ),
-      'display_variants' => 0,
-      'display_supplements' => 0,
-      'display_variants_list_inline' => 1,
-      'pdf_download' => array(
-        'display_pdf_download' => 0,
-        'pdf_download_icon' => 'icon-cloud-download',
-        'pdf_download_text' => 'PDF',
-      ),
-      'cpath_prefix' => '/content',
-      'show_mark_citation' => 0,
-      'display_infotrieve_link' => 0,
-      'infotrieve_link_settings' => array(
-        'icon' => 'icon-usd',
-        'link_caption' => 'Order full text via Infotrieve',
-      ),
-      'display_highlight_image' => 0,
-      'highlight_image_style' => '',
-      'featured_image_click_image' => 'nothing',
-      'display_contributors' => 0,
-      'include_on_behalf' => 1,
-      'display_orcid_icon' => 0,
-      'display_author_settings' => array(
-        'author_format_type' => '_custom',
-        'author_format_custom' => 'f lc',
-        'separator' => ', ',
-        'and' => 0,
-      ),
-      'display_author_types' => array(
-        'author' => 0,
-        'editor' => 0,
-        'group-author' => 0,
-        'guest-editor' => 0,
-        'presenter' => 0,
-        'translator' => 0,
-        'reviewer' => 0,
-      ),
-      'display_author_types_settings' => array(
-        'author' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'editor' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'group-author' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'guest-editor' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'presenter' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'translator' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-        'reviewer' => array(
-          'label_display' => 0,
-          'label' => '',
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-          'show-orcid-icon' => 0,
-        ),
-      ),
-      'display_author_tooltip' => 0,
-      'display_google_scholar_tooltip' => 1,
-      'display_pubmed_tooltip' => 1,
-      'display_advanced_search_tooltip' => 1,
-      'display_author_landing_page_tooltip' => 0,
-      'display_orcid_tooltip' => 1,
-      'author_site_search_path' => 'search/',
-    ),
-    'highwire_comment' => array(
-      'selector' => 0,
-      'citation_style' => 'highwire_comment',
-      'show_title' => 0,
-      'title_as_link' => 0,
-      'title_as_link_type' => 'tab_view',
-      'add_title_anchor' => 0,
-      'author_format_type' => 'fullname',
-      'author_format_custom' => '',
-      'author_list_separator' => ', ',
-      'date_label' => '',
-      'date_format_type' => 'custom',
-      'date_format' => '(j F Y)',
-      'display_comment_body' => 1,
-      'style_comment_body' => array(
-        'enable_show_more_link' => 1,
-        'show_more_link_title' => 'Show More',
-        'show_less_link_title' => 'Show Less',
-        'full_text_body_length' => '1500',
-      ),
-      'display_attachment' => 1,
-      'display_conflict_of_interest' => 1,
-    ),
-    'highwire_fragment' => array(
-      'selector' => 0,
-      'citation_style' => 'ama',
-      'cache_enabled' => 1,
-      'cache_time' => '600',
-      'title_type' => 'full',
-      'short_title_options' => array(
-        'char_count' => '50',
-        'add_ellipsis' => 0,
-      ),
-      'title_as_link' => 0,
-      'display_subtitle' => 0,
-      'choose_pubdate' => 'ppubdate',
-      'pubdate_format_type' => '',
-      'pubdate_format_custom' => '',
-      'display_markup_snippet' => '',
-      'highlight_image_toggle' => 0,
-      'display_original_link' => 0,
-      'display_access_indicator' => '0',
-      'access_indicator_settings' => array(
-        'open_access' => array(
-          'icon' => 'icon-unlock',
-          'title' => 'Open Access',
-        ),
-        'user_access' => array(
-          'icon' => 'icon-ok-sign',
-          'title' => 'You have access',
-        ),
-        'no_access' => array(
-          'icon' => 'icon-lock',
-          'title' => 'Restricted access',
-        ),
-      ),
-      'display_variants' => 0,
-      'display_supplements' => 0,
-      'display_variants_list_inline' => 1,
-      'pdf_download' => array(
-        'display_pdf_download' => 0,
-        'pdf_download_icon' => 'icon-cloud-download',
-        'pdf_download_text' => 'PDF',
-      ),
-      'cpath_prefix' => '/content',
-      'show_mark_citation' => 0,
-      'display_infotrieve_link' => 0,
-      'infotrieve_link_settings' => array(
-        'icon' => 'icon-usd',
-        'link_caption' => 'Order full text via Infotrieve',
-      ),
-      'display_highlight_image' => 0,
-      'highlight_image_style' => '',
-      'display_fragment_caption' => 1,
-      'enable_show_more_link' => array(
-        'is_checked_enable_show_more_link' => 0,
-        'show_more_link_title' => 'Show More',
-        'show_less_link_title' => 'Show Less',
-        'snippet_max_length' => '150',
-      ),
-      'fragment_image_settings' => array(
-        'fragment_image_variant' => 'medium',
-        'fragment_click_image' => 'colorbox',
-        'show_download_links' => 1,
-      ),
-      'display_parent_citation' => 1,
-      'parent_citation_type' => 'highwire_article',
-      'parent_citation_settings' => array(
-        'citation_style' => 'mla',
-        'cache_enabled' => 1,
-        'cache_time' => '600',
-        'title_type' => 'full',
-        'short_title_options' => array(
-          'char_count' => '50',
-          'add_ellipsis' => 0,
-        ),
-        'title_as_link' => 0,
-        'display_subtitle' => 0,
-        'choose_pubdate' => 'ppubdate',
-        'pubdate_format_type' => '',
-        'pubdate_format_custom' => '',
-        'display_markup_snippet' => '',
-        'highlight_image_toggle' => 0,
-        'display_original_link' => 0,
-        'display_access_indicator' => 0,
-        'access_indicator_settings' => array(
-          'open_access' => array(
-            'icon' => 'icon-unlock',
-            'title' => 'Open Access',
-          ),
-          'user_access' => array(
-            'icon' => 'icon-ok-sign',
-            'title' => 'You have access',
-          ),
-          'no_access' => array(
-            'icon' => 'icon-lock',
-            'title' => 'Restricted access',
-          ),
-        ),
-        'display_variants' => 0,
-        'display_supplements' => 0,
-        'display_variants_list_inline' => 1,
-        'pdf_download' => array(
-          'display_pdf_download' => 0,
-          'pdf_download_icon' => 'icon-cloud-download',
-          'pdf_download_text' => 'PDF',
-        ),
-        'cpath_prefix' => '/content',
-        'show_mark_citation' => 0,
-        'display_infotrieve_link' => 0,
-        'infotrieve_link_settings' => array(
-          'icon' => 'icon-usd',
-          'link_caption' => 'Order full text via Infotrieve',
-        ),
-        'display_highlight_image' => '0',
-        'highlight_image_style' => '',
-        'featured_image_variant' => 'large',
-        'featured_image_click_image' => 'nothing',
-        'display_cme_link' => 0,
-        'display_cme_link_attributes' => array(
-          'target' => '',
-        ),
-        'display_abstract_tooltip' => 0,
-        'display_contributors' => 0,
-        'include_on_behalf' => 0,
-        'display_orcid_icon' => 0,
-        'display_author_settings' => array(
-          'author_format_type' => '_custom',
-          'author_format_custom' => 'f lc',
-          'separator' => ', ',
-          'and' => 0,
-        ),
-        'display_author_types' => array(
-          'author' => 0,
-          'editor' => 0,
-          'group-author' => 0,
-          'guest-editor' => 0,
-          'presenter' => 0,
-          'translator' => 0,
-          'reviewer' => 0,
-        ),
-        'display_author_types_settings' => array(
-          'author' => array(
-            'label_display' => 0,
-            'label' => '',
-            'author_format_type' => '_custom',
-            'author_format_custom' => 'f lc',
-            'separator' => ', ',
-            'and' => 0,
-            'show-orcid-icon' => 0,
-          ),
-          'editor' => array(
-            'label_display' => 0,
-            'label' => '',
-            'author_format_type' => '_custom',
-            'author_format_custom' => 'f lc',
-            'separator' => ', ',
-            'and' => 0,
-            'show-orcid-icon' => 0,
-          ),
-          'group-author' => array(
-            'label_display' => 0,
-            'label' => '',
-            'author_format_type' => '_custom',
-            'author_format_custom' => 'f lc',
-            'separator' => ', ',
-            'and' => 0,
-            'show-orcid-icon' => 0,
-          ),
-          'guest-editor' => array(
-            'label_display' => 0,
-            'label' => '',
-            'author_format_type' => '_custom',
-            'author_format_custom' => 'f lc',
-            'separator' => ', ',
-            'and' => 0,
-            'show-orcid-icon' => 0,
-          ),
-          'presenter' => array(
-            'label_display' => 0,
-            'label' => '',
-            'author_format_type' => '_custom',
-            'author_format_custom' => 'f lc',
-            'separator' => ', ',
-            'and' => 0,
-            'show-orcid-icon' => 0,
-          ),
-          'translator' => array(
-            'label_display' => 0,
-            'label' => '',
-            'author_format_type' => '_custom',
-            'author_format_custom' => 'f lc',
-            'separator' => ', ',
-            'and' => 0,
-            'show-orcid-icon' => 0,
-          ),
-          'reviewer' => array(
-            'label_display' => 0,
-            'label' => '',
-            'author_format_type' => '_custom',
-            'author_format_custom' => 'f lc',
-            'separator' => ', ',
-            'and' => 0,
-            'show-orcid-icon' => 0,
-          ),
-        ),
-        'display_author_tooltip' => 0,
-        'display_google_scholar_tooltip' => 1,
-        'display_pubmed_tooltip' => 1,
-        'display_advanced_search_tooltip' => 1,
-        'display_author_landing_page_tooltip' => 1,
-        'display_orcid_tooltip' => 1,
-        'display_ads_search_tooltip' => 0,
-        'display_agricola_tooltip' => 0,
-        'author_site_search_path' => 'search/',
-        'display_translations' => 0,
-        'display_translations_text' => 'Translations Available',
-        'display_translations_text_icon' => 'icon-globe',
-      ),
-    ),
-    'highwire_book_section' => array(
-      'selector' => 0,
-      'citation_style' => 'folio_book_sections_standard',
-      'cache_enabled' => 1,
-      'cache_time' => '600',
-      'title_type' => 'full',
-      'short_title_options' => array(
-        'char_count' => '50',
-        'add_ellipsis' => 0,
-      ),
-      'title_as_link' => 0,
-      'display_subtitle' => 0,
-      'choose_pubdate' => 'ppubdate',
-      'pubdate_format_type' => '',
-      'pubdate_format_custom' => '',
-      'display_markup_snippet' => '',
-      'highlight_image_toggle' => 0,
-      'display_original_link' => 0,
-      'display_access_indicator' => 0,
-      'access_indicator_settings' => array(
-        'open_access' => array(
-          'icon' => 'icon-unlock',
-          'title' => 'Open Access',
-        ),
-        'user_access' => array(
-          'icon' => 'icon-ok-sign',
-          'title' => 'You have access',
-        ),
-        'no_access' => array(
-          'icon' => 'icon-lock',
-          'title' => 'Restricted access',
-        ),
-      ),
-      'display_variants' => 0,
-      'display_supplements' => 0,
-      'display_variants_list_inline' => 1,
-      'pdf_download' => array(
-        'display_pdf_download' => 0,
-        'pdf_download_icon' => 'icon-cloud-download',
-        'pdf_download_text' => 'PDF',
-      ),
-      'cpath_prefix' => '/content',
-      'show_mark_citation' => 0,
-      'display_infotrieve_link' => 0,
-      'infotrieve_link_settings' => array(
-        'icon' => 'icon-usd',
-        'link_caption' => 'Order full text via Infotrieve',
-      ),
-      'display_highlight_image' => 0,
-      'highlight_image_style' => '',
-      'display_abstract_tooltip' => 0,
-      'display_author_tooltip' => 0,
-      'display_google_scholar_tooltip' => 1,
-      'display_pubmed_tooltip' => 1,
-      'display_advanced_search_tooltip' => 1,
-      'display_author_landing_page_tooltip' => 0,
-      'author_site_search_path' => 'search/',
-    ),
-    'highwire_journal' => array(
-      'selector' => 0,
-      'citation_style' => 'mla',
-      'cache_enabled' => 1,
-      'cache_time' => '600',
-      'title_type' => 'full',
-      'short_title_options' => array(
-        'char_count' => '50',
-        'add_ellipsis' => 0,
-      ),
-      'title_as_link' => 0,
-      'display_subtitle' => 0,
-      'choose_pubdate' => 'ppubdate',
-      'pubdate_format_type' => '',
-      'pubdate_format_custom' => '',
-      'display_markup_snippet' => '',
-      'highlight_image_toggle' => 0,
-      'display_original_link' => 0,
-      'display_access_indicator' => 0,
-      'access_indicator_settings' => array(
-        'open_access' => array(
-          'icon' => 'icon-unlock',
-          'title' => 'Open Access',
-        ),
-        'user_access' => array(
-          'icon' => 'icon-ok-sign',
-          'title' => 'You have access',
-        ),
-        'no_access' => array(
-          'icon' => 'icon-lock',
-          'title' => 'Restricted access',
-        ),
-      ),
-      'display_variants' => 0,
-      'display_supplements' => 0,
-      'display_variants_list_inline' => 1,
-      'pdf_download' => array(
-        'display_pdf_download' => 0,
-        'pdf_download_icon' => 'icon-cloud-download',
-        'pdf_download_text' => 'PDF',
-      ),
-      'cpath_prefix' => '/content',
-      'show_mark_citation' => 0,
-      'display_infotrieve_link' => 0,
-      'infotrieve_link_settings' => array(
-        'icon' => 'icon-usd',
-        'link_caption' => 'Order full text via Infotrieve',
-      ),
-      'display_highlight_image' => 0,
-      'highlight_image_style' => '',
-      'display_author_tooltip' => 0,
-      'display_google_scholar_tooltip' => 1,
-      'display_pubmed_tooltip' => 1,
-      'display_advanced_search_tooltip' => 1,
-      'display_author_landing_page_tooltip' => 0,
-      'display_orcid_tooltip' => 1,
-      'author_site_search_path' => 'search/',
-    ),
   );
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Footer: Global: Text area */
@@ -2403,7 +497,7 @@ function jnl_isa_home_page_views_default_views() {
   $handler->display->display_options['arguments']['field_highwire_a_journal_nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_highwire_a_journal_nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_highwire_a_journal_nid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Content: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -2467,7 +561,7 @@ function jnl_isa_home_page_views_default_views() {
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Filter criterion: Content: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';

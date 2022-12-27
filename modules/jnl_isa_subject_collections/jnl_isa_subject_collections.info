@@ -2,7 +2,6 @@ name = isa Subject Collections
 description = This will hold variants for Highwire collections
 core = 7.x
 package = Highwire Journal Templates
-php = 5.2.4
 version = 7.x-1.0
 project = jnl_isa_subject_collections
 dependencies[] = ctools
