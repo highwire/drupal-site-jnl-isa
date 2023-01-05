@@ -172,3 +172,47 @@ function jnl_isa_styles_update_7103(&$sandbox) {
     menu_link_save($item);
   }
 }
+
+/**
+ * IAUF-11 : QA feedback
+ */
+function jnl_isa_styles_update_7107(&$sandbox) {
+  $theme_status = db_query("SELECT status FROM system WHERE name = 'jcore_1'")->fetchField();
+  $jcode = variable_get('highwire_default_jcode', FALSE);
+  if ($jcode == 'isa') {
+    if ($theme_status) {
+      $jcore_1_settings = variable_get('theme_jcore_1_settings', array());
+      $color_jcore_1_palette = variable_get('color_jcore_1_palette', array());
+      $colors = array(
+        'dru_tabs_links' => '#cccccc',
+        'tab_link_hover' => '#000000',
+        'tab_link_active' => '#000000',
+        'dru_tabs_links_active_bg' => '#6B8847',
+        'carousel_region_bg' => '#45533a',
+      );
+      foreach ($colors as $key => $color) {
+        $jcore_1_settings['palette'][$key] = $color;
+        $color_jcore_1_palette[$key] = $color;
+      }
+      variable_set('theme_jcore_1_settings', $jcore_1_settings);
+      variable_set('color_jcore_1_palette', $color_jcore_1_palette);  
+    }
+  // making required field for webform
+  $nids = db_query("
+    SELECT nid
+    FROM {node}
+    WHERE type = 'webform' AND title = 'Feedback'
+    ")->fetchCol();
+      foreach ($nids as $nid) {
+        $node = node_load($nid);
+        $required = array('name', 'email_address', 'subject');
+        foreach ($node->webform['components'] as &$component) {		
+          if (in_array($component['form_key'], $required)) {
+            $component['required'] = 1;
+          }
+        }  
+        node_save($node);
+    }	
+  } 
+}
+
