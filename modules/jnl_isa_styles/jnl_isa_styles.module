@@ -13,3 +13,15 @@ function jnl_isa_styles_preprocess_html(&$vars) {
   drupal_add_css($module_path . '/css/jnl_isa_styles.css.less', array('group' => 2001));
 }
 
+/**
+ * IAUF-11 : QA feedback
+ * Implements hook_form_alter().
+ */
+function jnl_isa_styles_form_alter(&$form, &$form_state, $form_id) {
+  if ($form['#form_id'] == 'webform_client_form_10') {
+    if (!user_is_logged_in()) {
+      $form['submitted']['name']['#default_value'] = '';
+    }
+  }
+}
+
