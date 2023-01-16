@@ -241,21 +241,23 @@ function jnl_isa_challenge_override_default_panels_mini() {
   $pane->access = array();
   $pane->configuration = array(
     'enable_drupal_login_form' => 1,
-    'enable_athens_login' => 1,
-    'enable_shib_login' => 1,
+    'enable_athens_login' => 0,
+    'enable_shib_login' => 0,
     'context' => 'empty',
     'override_title' => 0,
     'override_title_text' => '',
     'drupal_login_form' => 'full',
     'shib_description' => 'You may be able to gain access using your login credentials for your institution. Contact your library if you do not have a username and password.',
     'athens_description' => 'If your organization uses OpenAthens, you can log in using your OpenAthens username and password. <span class="openathens-sites"> To check if your institution is supported, please see <a href="http://auth.athensams.net/orglist.php">this list</a>.</span> Contact your library for more details.',
-    'enable_foxycart' => 0,
-    'foxycart_text' => 'Purchase Access (%short-price)',
-    'foxycart_link_type' => 'button',
+    'enable_foxycart' => NULL,
+    'foxycart_text' => NULL,
+    'foxycart_link_type' => NULL,
     'enable_deep_dyve' => 0,
     'deep_dyve_affiliate_id' => '',
     'deep_dyve_link_text' => '',
     'purchase_description' => 'You may purchase access to this article. This will require you to <a href="/user/register">create an account</a> if you don\'t already have one.',
+    'shib_button_label' => 'via Institution',
+    'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
