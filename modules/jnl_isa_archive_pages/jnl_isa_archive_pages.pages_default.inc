@@ -1517,7 +1517,7 @@ function jnl_isa_archive_pages_default_page_manager_pages() {
     'method' => '0',
     'settings' => array(),
   );
-  $display->title = 'Archive of all online content Volume ';
+  $display->title = 'Archive of all online content ';
   $display->uuid = '1944f068-acef-4b18-ae1c-8507315a5cfb';
   $display->storage_type = 'page_manager';
   $display->storage_id = 'page_jnl_isa_issue_archive_volume_panel_context';

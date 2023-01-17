@@ -216,3 +216,22 @@ function jnl_isa_styles_update_7107(&$sandbox) {
   } 
 }
 
+/**
+ * IAUF-24: Disable umbrella menu links and client feedback.
+ */
+function jnl_isa_styles_update_7108(&$sandbox) {
+  $umbrella_menu_links = menu_load_links('umbrella-menu');
+  foreach ($umbrella_menu_links as $key => $link) {
+      $link['hidden'] = 1;
+      menu_link_save($link);
+  }
+  
+  $social_links = menu_load_links('menu-social-media');
+  foreach($social_links as $link) {
+    if ($link['link_path'] == 'https://www.linkedin.com/company/international-society-of-arboriculture') {
+      $link['link_path'] = "https://www.linkedin.com/company/internationalsocietyofarboriculture";
+      menu_link_save($link);
+    }
+  }
+}
+
