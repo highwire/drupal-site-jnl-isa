@@ -1,0 +1,16 @@
+<?php
+/**
+ * @file
+ * ISA custom install.
+ */
+
+/**
+ * Enable module styles modules
+ */
+function jnl_isa_update_7101(&$sandbox) {
+  $enabled = module_enable(array('jnl_isa_styles'));
+  if (!$enabled) {
+    throw new DrupalUpdateException('jnl_isa_styles module did not enable.');
+  }
+}
+

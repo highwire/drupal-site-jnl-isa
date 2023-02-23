@@ -1,7 +1,6 @@
 name = isa Alerts
 core = 7.x
 package = Highwire Journal Templates
-php = 5.2.4
 version = 7.x-1.0-beta1
 project = jnl_isa_alerts
 dependencies[] = ctools
@@ -49,4 +48,3 @@ features[variable][] = highwire_alerts_search_highwire_alerts_search_create_disa
 features[variable][] = highwire_alerts_search_highwire_alerts_search_edit_disabled
 features[variable][] = highwire_alerts_search_highwire_alerts_search_view_disabled
 features[variable][] = highwire_alerts_toc_edit_disabled
-mtime = 1466534975

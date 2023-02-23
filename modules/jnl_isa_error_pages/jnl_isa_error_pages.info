@@ -1,7 +1,6 @@
 name = isa Error Pages
 core = 7.x
 package = Highwire Journal Templates
-php = 5.2.4
 version = 7.x-1.0-beta1
 project = jnl_isa_error_pages
 dependencies[] = ctools
@@ -10,4 +9,3 @@ features[ctools][] = page_manager:pages_default:1
 features[features_api][] = api:1
 features[page_manager_pages][] = jnl_isa_403_error_page
 features[page_manager_pages][] = jnl_isa_404_error_page
-mtime = 1417551201
