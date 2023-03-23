@@ -519,8 +519,8 @@ function jnl_isa_entity_pages_strongarm() {
   $strongarm->name = 'service_links_show';
   $strongarm->value = array(
     'forward' => 1,
-    'delicious' => 1,
-    'digg' => 1,
+    'delicious' => 0,
+    'digg' => 0,
     'stumbleupon' => 0,
     'twitter' => 1,
     'pingthis' => 0,
@@ -530,7 +530,7 @@ function jnl_isa_entity_pages_strongarm() {
     'furl' => 0,
     'facebook' => 1,
     'myspace' => 0,
-    'google' => 1,
+    'google' => 0,
     'google_plus' => 0,
     'yahoo' => 0,
     'linkedin' => 0,
@@ -544,7 +544,7 @@ function jnl_isa_entity_pages_strongarm() {
     'identica' => 0,
     'newskicks' => 0,
     'diigo' => 0,
-    'citeulike' => 1,
+    'citeulike' => 0,
     'mendeley' => 1,
     'connotea' => 0,
     'facebook_share' => 0,
