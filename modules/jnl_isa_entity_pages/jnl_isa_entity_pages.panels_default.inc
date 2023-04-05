@@ -4641,7 +4641,7 @@ function jnl_isa_entity_pages_default_panels_mini() {
   $pane->panel = 'content_left';
   $pane->type = 'minipanel_dialog_link';
   $pane->subtype = 'jnl_isa_art_alert';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'label' => '',
